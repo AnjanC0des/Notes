@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
 
 
-<div>
+<div style="font-family: 'Whisper', cursive;">
 
 # React notes
 
