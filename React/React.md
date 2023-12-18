@@ -60,7 +60,7 @@
   * [Throwing json](#throw-json)
   * [Using dynamic route params in loaders](#using-dynamic-route-params-in-loaders)
   * [useRouteLoaderData() hook](#useRouteLoaderData-hook)
-
+---
 ### :sparkles: Setup
 
 * **Install node.js**. Also **npm install create-react-app**.
