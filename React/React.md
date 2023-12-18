@@ -17,7 +17,20 @@
 * [Making reusable wrapper components in react](#sparkles-making-reusable-wrapper-components-in-react)
 * [Events in react](#sparkles-events-in-react)
 * [State](#star2-state)
-  * [useState hook](#useState-hook) 
+  * [useState hook](#useState-hook)
+  * [prev](#prev)
+  * [Using state with event listeners](#using-state-with-event-listeners)
+  * [Working with multiple states](#working-with-multiple-states)
+* [Working with forms and two way binding](#sparkles-working-with-forms-and-two-way-binding)
+* [Passing data from child to parent and lifting the state](#star-passing-data-from-child-to-parent-and-lifting-the-state)
+* [Lists in React](#sparkles-lists-in-react)
+  * [Stateful Lists](#stateful-lists)
+* [Rendering conditional content in React](#sparkles-rendering-conditional-content-in-react)
+* [Fragments, Portals and Refs](#star-fragments-portals-and-refs)
+  * [Fragments](#fragments)
+  * [Portals](#portals)
+  * [Refs](#refs)
+* [Side Effects and useEffect()](#star2-side-effects-and-useEffect())    
 
 ### :sparkles: Setup
 
