@@ -10,11 +10,14 @@
 # React notes
 
 ## Contents
-[Setup](#sparkles-setup)
-[Components](#sparkles-components)
-[Props](#star-props)
-[Splitting Components](#sparkles-splitting-components)
-[Making reusable wrapper components in react](#sparkles-making-reusable-wrapper-components-in-react)
+* [Setup](#sparkles-setup)
+* [Components](#sparkles-components)
+* [Props](#star-props)
+* [Splitting Components](#sparkles-splitting-components)
+* [Making reusable wrapper components in react](#sparkles-making-reusable-wrapper-components-in-react)
+* [Events in react](#sparkles-events-in-react)
+* [State](#star2-state)
+  * [useState hook](#useState-hook) 
 
 ### :sparkles: Setup
 
