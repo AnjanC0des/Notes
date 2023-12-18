@@ -9,6 +9,9 @@
 
 # React notes
 
+## Contents
+[Setup](#sparkles-setup)
+
 ### :sparkles: Setup
 
 * **Install node.js**. Also **npm install create-react-app**.
