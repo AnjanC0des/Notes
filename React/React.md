@@ -11,6 +11,10 @@
 
 ## Contents
 [Setup](#sparkles-setup)
+[Components](#sparkles-components)
+[Props](#star-props)
+[Splitting Components](#sparkles-splitting-components)
+[Making reusable wrapper components in react](#sparkles-making-reusable-wrapper-components-in-react)
 
 ### :sparkles: Setup
 
