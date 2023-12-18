@@ -59,7 +59,7 @@
   * [Customising Error thrown while Routing](#customising-error-thrown-while-routing)
   * [Throwing json](#throw-json)
   * [Using dynamic route params in loaders](#using-dynamic-route-params-in-loaders)
-  * [useRouteLaoderData() hook](#useRouteLoaderData-hook)
+  * [useRouteLoaderData() hook](#useRouteLoaderData-hook)
 
 ### :sparkles: Setup
 
