@@ -7,6 +7,7 @@
 * [The Tools](#the-tools)
   * [Deep Concetration and Flow](#deep-concentration-and-flow)
   * [Spaced Repetition](#spaced-repetition)
+  * [Metacognition](#metacognition)
 
 ## Introduction
 
@@ -81,7 +82,24 @@ respond to the information you are recieving, since you are just recieving it, b
 * We do this by writing the stuff down on paper, making notes, flash cards or quizzes. The more we revisit the information, it will retain in our memory more easily.
 * We will be able to recall the concepts more actively, which results in better grasp of topics that build on it or related to it and making it easier and quicker to remember.
 * While learning concepts or languages that we are not acquainted with spaced repetition is an excellent tool.
-* It is immensly useful with learning new languages, learning difficult concepts, since it deepens the neural pathways and make our brain more aquainted to the information/concept.
+* It is immensly useful with learning new languages, learning difficult concepts, etc. since it deepens the neural pathways and make our brain more aquainted to the information/concept.
+
+### Metacognition
+
+* Metacognition is the term referred to thinking about the way you are approaching a process to do the process in a better manner.
+* In learning you use metacognition techniques to ensure that you are learning in the right way and achieving results as intended.
+* This includes if three stages:
+   * Planning the process : We plan how we are going to approach a topic and making detailed milestones to achieve
+   * Evaluating your actions in real time : Taking a step back and assessing the way we are doing the process making sure we have clarity on the subject.
+   * Assessing the results and reflecting on them : After the learning process is complete, we reflect on how it was helpful, what worked, what didnt and how we can improve the process.
+* We assume the roles of architect, detective and judge of ourselves, and plan, assess and judge ourselves from a third person perspective.
+* We must keep in mind the ways how learning can be made more potent(like proper learning techniques), make sure to have positive associations and processes to make the information stick.
+* Different metacognition activities include:
+  * Reflective writing : journaling about the work to have feedback and clarity of our actions
+  * Summarization : Making sure we can summarize and explain the learned concepts in simple manner
+  * Self questioning : Questioning ourself and ensuring we are proceeding as planned and maximizing efficiency
+  * Visual Aids : Visualizing concepts and having visual representation of our learning process or concepts themselves that can aid in the process
+* Thinking about how we think can help us follow proper path and recieve the results we desire while improving our learning process. 
 
 
 
