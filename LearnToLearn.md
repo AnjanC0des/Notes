@@ -9,7 +9,7 @@
   * [Spaced Repetition](#spaced-repetition)
   * [Metacognition](#metacognition)
 * [Biases](#biases)
-* [Learning Hacks](#learning-hacks)
+* [Best Practices](#best-practices)
 
 ## Introduction
 
@@ -131,9 +131,7 @@ respond to the information you are recieving, since you are just recieving it, b
   * **Power of yet** : When we acknowledge that we are unable to do something presently we also open up ourselves to better ourselves and eventually succeed at the task.
 * When we have an unbiased mind and growth mindset we can achieve greater performance, resilience and positive outlook which boosts our morale and confidence in our positive behaviors.
 
-### Dos and Don'ts 
-
-#### Dos
+### Best Practices
 
 * **Feynman Technique** is proven to improve our understanding of the topic and make it stick. The technqiue involves rephrasing.
 * We must be as engaged while studying as if we are attempting an examination paper under a time crunch.
