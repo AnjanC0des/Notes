@@ -149,7 +149,7 @@ respond to the information you are recieving, since you are just recieving it, b
 
 * Procrastination should be beaten at all costs. Whenever you have to do something important, just get up and do it. When you wait to do it, you are reinforcing your procrastinating habit. Procrastination leads to unnecessary stress and eventually mental crisis as your goals stay unfulfilled.
 * Lack of interest or motivation must be checked. We need to find reasons for learning or doing something and what it serves us in the long run. When we are more invested in the topic, we are more likely to pursue it efficiently and implement it. Here we use **sunk cost fallacy** to our advantage.
-* We must never forget using metacognition techniques are they are the test of our learning health.
+* We must never forget using metacognition techniques as they are the test of our learning health.
 
 
 
