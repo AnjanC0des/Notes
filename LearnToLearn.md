@@ -147,7 +147,7 @@ respond to the information you are recieving, since you are just recieving it, b
 * Passive Consumption must be avoided. Things that are consumed passively dont tend to stick and decay faster. Summarization, rephrasing, self testing, spaced-repeating and implementing are ways to make the information stick.
 * Memorizing without understanding should be avoided as well, since that information cannot be implemented properly and also decays rapidly.
 
-> Procrastination is the ultimate mind killer. It cripples your mind from learning. It prevents the mind from doing what it is made to do.
+> Procrastination is the ultimate mind killer. It cripples your mind from learning. Like tyre failure of a car, it prevents the mind from doing what it is made to do.
 
 * Procrastination should be beaten at all costs. Whenever you have to do something important, just get up and do it. When you wait to do it, you are reinforcing your procrastinating habit. Procrastination leads to unnecessary stress and eventually mental crisis as your goals stay unfulfilled.
 * Lack of interest or motivation must be checked. We need to find reasons for learning or doing something and what it serves us in the long run. When we are more invested in the topic, we are more likely to pursue it efficiently and implement it. Here we use **sunk cost fallacy** to our advantage.
