@@ -16,7 +16,7 @@
 * Learning is the single most important thing that humans can do beside their biological and social activities to have a fruitful and satisfactory life. 
 * Eventhough learning has been one of the most beneficial activity since the dawn of humanity and humans learn instinctually and pick up things that seem intuitive to them and develop their skills on activites that come naturally to them.
 * But internet has changed that. Internet gives you access to vast amounts of information.This can be both beneficial and harmful, since helpful information can help us develop skills, become more informed and upgrade ourselves in general, overstimulation from apps and games affect our attention spans and messes with the natural reward system that we have making self developing activities less exciting and slows down our growth. 
-* We have reached a point where we need to learn how to learn more effectivly to make ourselves capable of learning a plathora of things and apply them as is the need of the hour.
+* We have reached a point where we need to learn how to learn more effectivly to make ourselves capable of learning a plethora of things and apply them as is the need of the hour.
 * Many techniques and their application methods are outlined here.
 * Learning fast, synthesising, applying, training to keep ourselves absorbed and
 making sure we are doing it the best possible way is the aim.
@@ -49,14 +49,14 @@ making sure we are doing it the best possible way is the aim.
 * In the journey to be better and making yourself better, you'll discover many different ways to make yourself even better. It is good practice to maintain a journal to record everything, so that you can come back to realign or rediscover. Also writings things down makes us to come to terms with things in our lives and organise our thoughts that will otherwise be running around.
 
 ## The Method
-* We must be in a mindset of putting in work for indefinite amount of time when we sit to study. When we dismiss the assocation of work with the duration of time we do it, our work is less hindered 
+* We must be in a mindset of putting in work for indefinite amount of time when we sit to study. When we dismiss the assocation of work with the duration of time we do it, our work is less hindered.
 * We have to switch our minds from the normal monkey-mode to input-mode. The act of making a consious effort to make our brain impressionable to input and supplementing the process with different activities to make the information stick is the aim.
-* This is essential, because what we do on instinct is make our brain churn out information in response to the information it recieves in real time. This activity needs to be consciously stopped and made a habit out of eventually. Because you dont have to think to
-respond to the information you are recieving, since you are just recieving it, but we forget this out of habit.
+* This is essential, because what we do on instinct is make our brain churn out information in response to the information it recieves in real time. This activity needs to be consciously stopped and made a habit out of eventually. Because you dont have to think to respond to the information you are recieving, since you are just recieving it, but we forget this out of habit.
 * Everything that we try to learn and understand can be done so even more effectively if we are actively putting in more thought into it.
-* The more we are invested and intrested in something, easier it will be for us to enagage and stay focused on the subject. Try to develop a bond with subject as you learn.F
+* The more we are invested and intrested in something, easier it will be for us to enagage and stay focused on the subject. Try to develop a bond with subject as you learn.
 * Visualizing the knowledge that we come accross helps us make it stick. We must be conscious of it and do it more often. With repetition this will come naturally and become a good habit.
 * You must be seated somewhere that has no distractions in your field of view. Sitting somewhere silent/with noise cancelling head phones is best practice.
+* Just visualize the efficiency with which you want to do a task and then do it.
 
 ## The Tools
 ### Deep Concentration and Flow
@@ -70,7 +70,7 @@ respond to the information you are recieving, since you are just recieving it, b
 * When we are invested in the activity because we find it **intresting or we gain some reward out of it**, it becomes more **easy to enter the flow state**. Through practice we can effortlessly enter it and this makes us tremendously productive.
 * To keep the efficiency high it is beneficial to disenegage the thought pedal from time to time. This way you extend the duration of flow and also make your brain more acquainted with the thought process while you do it making it easier to do.
 * This technique is essentially the application of the **Pomodoro technique**.
-* Pomodoro Technique is a technique where we focus intensly on a task for say 25 min and disengage for 5 mins and re-engage. This makes us more efficient.
+* Pomodoro Technique is a technique where we focus intensly on a task for say 25 min and disengage for 5 mins and then re-engage. This makes us more efficient.
 * If we begin to feel our attention wavering or we feel unintrested in a task, we can just think that we have just started doing the task and this makes us continue on our work.
 * We should block all distractions during flow.
 * With practice entering flow will become effortless and we will be able to be engaged in tasks for longer and more efficiency.
@@ -90,13 +90,13 @@ respond to the information you are recieving, since you are just recieving it, b
 * Metacognition is the term referred to thinking about the way you are approaching a process to do the process in a better manner.
 * In learning you use metacognition techniques to ensure that you are learning in the right way and achieving results as intended.
 * This includes if three stages:
-   * **Planning the process** : We plan how we are going to approach a topic and making detailed milestones to achieve
+   * **Planning the process** : We plan how we are going to approach a topic and making detailed milestones to achieve it.
    * **Evaluating your actions in real time** : Taking a step back and assessing the way we are doing the process making sure we have clarity on the subject.
-   * **Assessing the results and reflecting on them** : After the learning process is complete, we reflect on how it was helpful, what worked, what didnt and how we can improve the process.
+   * **Assessing the results and reflecting on them** : After the learning process is complete, we reflect on how it was helpful, what worked, what didn't and how we can improve the process.
 * We assume the roles of architect, detective and judge of ourselves, and plan, assess and judge ourselves from a third person perspective.
 * We must keep in mind the ways how learning can be made more potent(like proper learning techniques), make sure to have positive associations and processes to make the information stick.
 * Different metacognition activities include:
-  * **Reflective writing** : journaling about the work to have feedback and clarity of our actions
+  * **Reflective writing** : Journaling about the work to have feedback and clarity of our actions.
   * **Summarization** : Making sure we can summarize and explain the learned concepts in simple manner
   * **Self questioning** : Questioning ourself and ensuring we are proceeding as planned and maximizing efficiency
   * **Visual Aids** : Visualizing concepts and having visual representation of our learning process or concepts themselves that can aid in the process
@@ -104,7 +104,7 @@ respond to the information you are recieving, since you are just recieving it, b
 
 ## Biases 
 
-> Notice that one sneaker on a shopping site and all of a sudden you are starting to see more of those everywhere!
+> Notice that one sneaker on a shopping site and all of a sudden you start to see more of those everywhere!
 
 * When learning, we must ensure we are not being biased to ensure our learning is more hollistic and complete.
 * There are a bunch of biases that we need to look out for to avoid falling into them and limiting ourselves.
@@ -131,7 +131,7 @@ respond to the information you are recieving, since you are just recieving it, b
 
 ### Best Practices
 
-* **Feynman Technique** is proven to improve our understanding of the topic and make it stick. The technqiue involves rephrasing.
+* **Feynman Technique** is proven to improve our understanding of the topic and make it stick. The technqiue involves rephrasing concepts by breaking them down into simpler concepts.
 * We must be as engaged while studying as if we are attempting an examination paper under a time crunch.
 * We must set clear and achievable goals and must pursue them sincerly.
 * Being consistent with our studying habit is important since the benefits for being consistent compounds over time.
