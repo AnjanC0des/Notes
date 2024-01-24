@@ -13,11 +13,9 @@
 
 ## Introduction
 
-**What is need to learn more effetively?**
-
-* Learning is the single most important thing that humans can do beside their biological and social activities to have a fruitful and satifactory life. 
-* Eventhough learning has been one of the most beneficial activity since the dawn of humanity and humans learn instinctually and pick up things that seemed intuitive to them and develop their skills on activites the came naturally to them.
-* But internet has changed that. Internet gives you access to vast amounts of information.This can be both beneficial and harmful, since helpful information can help us develop skills, become more informed and upgrade ourselves in general, overstimulation from apps and games affect our attention spans and messes with the natural reward system that we have making self developing activites less exciting and slows down our growth. 
+* Learning is the single most important thing that humans can do beside their biological and social activities to have a fruitful and satisfactory life. 
+* Eventhough learning has been one of the most beneficial activity since the dawn of humanity and humans learn instinctually and pick up things that seem intuitive to them and develop their skills on activites that come naturally to them.
+* But internet has changed that. Internet gives you access to vast amounts of information.This can be both beneficial and harmful, since helpful information can help us develop skills, become more informed and upgrade ourselves in general, overstimulation from apps and games affect our attention spans and messes with the natural reward system that we have making self developing activities less exciting and slows down our growth. 
 * We have reached a point where we need to learn how to learn more effectivly to make ourselves capable of learning a plathora of things and apply them as is the need of the hour.
 * Many techniques and their application methods are outlined here.
 * Learning fast, synthesising, applying, training to keep ourselves absorbed and
