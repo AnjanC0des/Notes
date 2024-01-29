@@ -11,7 +11,7 @@
 [Review Notes](https://algs4.cs.princeton.edu/10fundamentals/)
 ## Array
 ### Contents
-* [Leaders in an array](####leaders-in-an-array)
+* [Leaders in an array](#leaders-in-an-array)
 ### Approaches:
 * **Iteration (Normal and reverse)** :  
 E.g.:  
