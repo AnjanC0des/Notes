@@ -10,8 +10,6 @@
 # SDE sheet problems
 [Review Notes](https://algs4.cs.princeton.edu/10fundamentals/)
 ## Array
-### Contents
-* [Leaders in an array](#1-leaders-in-an-array)
 ### Approaches:
 * **Iteration (Normal and reverse)** :  
 E.g.:  
