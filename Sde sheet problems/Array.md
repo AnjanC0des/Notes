@@ -44,7 +44,7 @@ E.g.:
     * Subarray with given sum
 
 ### Problems:  
-1. #### [Leaders in an array](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side) :
+#### [Leaders in an array](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side) :
 
 **Question** :
 
