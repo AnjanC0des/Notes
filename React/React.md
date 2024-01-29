@@ -33,7 +33,7 @@
 * [Side Effects and useEffect()](#star2-side-effects-and-useEffect)
 * [useReducer()](#star2-useReducer)
 * [Context](#star2-context)
-* [Using Context-Provider to handle state](#using-the-Context.Provider-to-handle-state)
+* [Using Context-Provider to handle state](#using-the-Context-Provider-to-handle-state)
 * [frowardRef](#sparkles-forwardRef)
 * [Optimizing React app](#star2-optimizing-react-app)
   * [React.memo()](#reactmemo)
