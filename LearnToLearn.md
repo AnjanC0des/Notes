@@ -8,6 +8,7 @@
   * [Deep Concetration and Flow](#deep-concentration-and-flow)
   * [Spaced Repetition](#spaced-repetition)
   * [Metacognition](#metacognition)
+  * [More techniques](#more-techniques)
 * [Biases](#biases)
 * [Best Practices](#best-practices)
 
@@ -101,6 +102,12 @@ making sure we are doing it the best possible way is the aim.
   * **Self questioning** : Questioning ourself and ensuring we are proceeding as planned and maximizing efficiency
   * **Visual Aids** : Visualizing concepts and having visual representation of our learning process or concepts themselves that can aid in the process
 * Thinking about how we think can help us follow proper path and recieve the results we desire while improving our learning process.
+
+### More techniques
+* When we **change the physical environment** while learning, the brain enriches the input of data with change in physical setting which in turn makes the information more sticky.
+* **Interleaving** (mixing up content and information) makes our information retreival process more snappy and encourages discrimination skills. In a subject while studying a new concept try recalling an old concept or seeing why or why not this concept can be applied to the current problem, or while learning new words try recalling old words and their meaning or adding more context or facts and implementations related to the word helps in absorbing and digesting information better. Applying things you learned in statistics to calculate gdp can be an enriching experience for both subjects. The idea is to supplement a subject matter with different context which which improves understanding.
+* **Taking a step back/ Walking away from the problem** is a good way to improve problem solving. This is the application of incubation(walking away) and percolation(longer detachment to the problem). Problem solving also occurs subconsciously. So we can use this method when caught in a rut or to re-access our strategy. Incubatinon can be used as a more fast pace solution when stuck, whereas percolation can be useful when learning new or complicated concepts. Giving time for new ideas to breathe before building up on them can help us learn them better.
+* 
 
 ## Biases 
 
