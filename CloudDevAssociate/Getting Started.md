@@ -50,4 +50,16 @@ users and groups are assigned permissions called policies.
 policies define permissions
 least previlege principle: dont give more permission than a suer needs
 
+#### iam policies inheritance
+policies attacehd at group level- policy applied to all group members
+
+user without a group can have inline policies
+users that are multiple groups inherit their policies
+consists of:
+version
+id
+statement: has a sid, effect(allows or denies access),principal(account user role to which this policy is applied to), action(list of action this policy allows or denies), resource list(list of resources where the actions are applied), condition(conditions when the policy comes into effect)
+
+
+
 
