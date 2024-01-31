@@ -11,4 +11,43 @@
 * We will provide a root user password and confirm it. This password can be recovered from email but forgetting it is not preferred.
 * Mention type of account(Course chose personal) and then provide additonal details for this account.
 * Then we need to enter credit card information.
-* Verify your identity and account is created.
+* Verify your identity and with phone number and sms or call and select a support plan. Sign up process is complete.
+* We then go to aws management console and we can sign in with root user email and password.
+
+### AWS Global infrastructure
+**Regions**: regions all around the world, has names such 
+cluster of data centers
+most services are region scoped
+how to choose a aws region? 
+Depends on some factors such as 
+compliance : data governance and legal req
+proximity
+pricing
+availability 
+**Availability Zones**: region has 3 to 6 availability zones
+each az has discrete data centers with redundant power networking and connectivity
+separate and isolated from disaster
+connected to other azs with high bandwidth ultra low latency networking to make a region
+**Data centers**
+**Edge location/points of presence** more than 400 pop
+
+example of global services: 
+iam dns
+cloudfront 
+web application firewall
+
+example of regional services:
+ec2 elastic beanstalk lambda
+
+### IAM
+identity and access management
+root account shouldnt be used or shared
+users are created and grouped
+users can belong to none or mutiple groups
+
+users are created and assigned permissions
+users and groups are assigned permissions called policies.
+policies define permissions
+least previlege principle: dont give more permission than a suer needs
+
+
