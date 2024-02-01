@@ -75,14 +75,12 @@ and in the array of leaders there is -1 instead of last element.
 ```java
 class Solution {
     public int[] replaceElements(int[] arr) {
-        int n=arr.length;
-        if (n==1 || n ==0) return new int[] {-1};
-        int max=arr[n-1];
-        arr[n-1]=-1;
-        for(int i=n-2;i>=0;i--){
-            int temp=arr[i];
+        int max=arr[arr.length-1],temp=0;
+        arr[arr.length-1]=-1;
+        for(int i=arr.length-2;i>=0;i--){
+            temp=arr[i];
             arr[i]=max;
-            if (temp>=max) max=temp;
+            if(temp>max) max=temp;
         }
         return arr;
     }
