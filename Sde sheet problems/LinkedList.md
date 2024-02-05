@@ -576,7 +576,7 @@ class Solution{
 ```  
 ---  
 
-13. #### [Implement Queue using Linked List]() :
+13. #### [Implement Queue using Linked List](https://www.geeksforgeeks.org/problems/implement-queue-using-linked-list/1) :
 
 **Question** :
 
