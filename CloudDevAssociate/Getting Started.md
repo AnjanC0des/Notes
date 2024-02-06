@@ -58,6 +58,10 @@ example of regional services: ec2, elastic beanstalk, lambda
     * action(list of action this policy allows or denies)
     * resource list(list of resources where the actions are applied)
     * condition(conditions when the policy comes into effect)
+ 
+#### MFA
+* passwords you know+device you know
+* google auth, authy(multi device), yubikey(),hardware key fob,ahrdware key for for gov cloud
 
 
 
