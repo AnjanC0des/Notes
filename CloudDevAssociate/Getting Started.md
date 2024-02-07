@@ -61,8 +61,26 @@ example of regional services: ec2, elastic beanstalk, lambda
  
 #### MFA
 * passwords you know+device you know
-* google auth, authy(multi device), yubikey(),hardware key fob,ahrdware key for for gov cloud
+* google auth, authy(multi device), yubikey(),hardware key fob,ahrdware key for for gov cloud.
+* Your should atleast have your root account and admin account have mfa since they manage everything.
 
+#### AWS access keys, CLI and SDK
+* We can access our aws account through three ways, through management console, through cli(access keys) and through sdk(app access keys).
+* access key id as username and seceret access key as password. Not to be shared with anyone since they can make their own access keys.
+* aws cli is the cli to manage all the aws tasks. further-more we can have more functionaly like automation and faster management with cli once mastered.
+* We cna also run the aws cli in our browser using cloudshell cli.
+* sdk is language specific, embedded in your application to manage aws resources from your app.
+
+#### IAM roles for services
+* for services such as ec2,etc to do access aws and do stuff we need to have an iam role attached to it. A service with a iam role attached is considered as one entity.
+* common roles:
+*  ec2 roles
+*  lamda function roles
+*  cloudformation roles
+
+#### Audit
+* We can check usage and be more effective in access management through iam credential reports and iam access advisor.
+* They are part of iam security and access management tools.
 
 
 
