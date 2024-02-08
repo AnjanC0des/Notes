@@ -82,5 +82,19 @@ example of regional services: ec2, elastic beanstalk, lambda
 * We can check usage and be more effective in access management through iam credential reports and iam access advisor.
 * They are part of iam security and access management tools.
 
+#### EC2
+* EC2(Elastic compute cloud) is one of the main services offered by aws.
+* EC2 is used in conjuntion with services such as ebs(elastic block store) to store data, elb(elastic load balancer) to distribute load across various ec2 instances, asg(auto scaling group) to scale the services up or down when needed.
+* EC2 instances can be configured as follows:
+ * OS : the operating system running on the insatance
+ * CPU : the compute power and number of cores used
+ * ram
+ * storage
+  * Network attachedw(ebs/efs) or hardware of ec2 itself
+ * Network card- speed and public ip address
+ * firewall rules - security groups
+ * bootstrap scripts(ec2 user data scripts)- scipts that run when the instances are initialised to set up the instance
+ 
+
 
 
