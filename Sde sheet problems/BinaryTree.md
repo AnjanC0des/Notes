@@ -112,21 +112,15 @@ A tree is height balanced if difference between heights of left and right subtre
 - Space complexity: $O(h)$ 
 
 ```java
-class Tree
-{
-    
-    int func(Node node,int h){
-        if(node==null)return h;
-        if(node.left==null && node.right==null)return h+1;
-        int h1=func(node.left,h+1);
-        int h2=func(node.right,h+1);
-        if(h1==-1||h2==-1) return -1;
-        if(Math.abs(h1-h2)>1) return -1;
-        return Math.max(h1,h2);
+class Tree{
+    int height(Node node, int h){
+        if(node==null) return h;
+        return Math.max(height(node.left,h+1),height(node.right,h+1));
     }
-    boolean isBalanced(Node root)
-    {
-	    return func(root,0)!=-1? true:false;
+    boolean isBalanced(Node root){
+        if(root==null) return true;
+        if(Math.abs(height(root.left,0)-height(root.right,0))>1) return false;
+        return isBalanced(root.left) && isBalanced(root.right);
     }
 }
 ```  
