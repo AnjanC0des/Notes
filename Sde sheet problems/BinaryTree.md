@@ -194,23 +194,21 @@ Left view of following tree is 1 2 4 8.
 class Tree
 {
     //Function to return list containing elements of left view of binary tree.
-    int height(Node node,int h){
-        if(node==null)return h;
-        return Math.max(height(node.left,h+1),height(node.right,h+1));
+    ArrayList<Integer> leftView(Node root){
+      ArrayList<Integer> sol=new ArrayList<Integer>();
+      for(int i=0;i<height(root,0);i++) sol.add(Integer.MIN_VALUE);
+      func(root,sol,0);
+      return sol;
     }
-    void func(Node node,ArrayList<Integer> arr,int h){
+    void func(Node node,ArrayList sol,int h){
         if(node==null) return;
-        if(arr.get(h)==0) arr.set(h,node.data);
-        func(node.left,arr,h+1);
-        func(node.right,arr,h+1);
+        if((int)sol.get(h)==Integer.MIN_VALUE) sol.set(h,node.data);
+        func(node.left,sol,h+1);
+        func(node.right,sol,h+1);
     }
-    ArrayList<Integer> leftView(Node root)
-    {
-      int n=height(root,0);
-      ArrayList<Integer> arr= new ArrayList<Integer>();
-      for(int i=0;i<n;i++) arr.add(0);
-      func(root,arr,0);
-      return arr;
+    int height(Node node, int h){
+        if(node==null) return h;
+        return Math.max(height(node.left,h+1),height(node.right,h+1));
     }
 }
 ```  
