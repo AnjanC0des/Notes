@@ -525,52 +525,38 @@ Reverse both linked lists and keep adding nodes till the smaller list finishes w
 
 ```java
 class Solution{
-    //Function to add two numbers represented by linked list.
-    static Node rev(Node head){
-        Node prev=null,p=null;
+    static Node addTwoLists(Node first, Node second){
+        int carry=0;
+        first=reverse(first);second=reverse(second);
+        int length1=length(first),length2=length(second);
+        Node temp=first;
+        if(length2>length1) {first=second;second=temp;}
+        temp=first;
+        while(first!=null){
+            first.data=first.data+carry+(second!=null?second.data:0);
+            carry=first.data/10;
+            first.data%=10;
+            if(first.next==null && carry!=0) {first.next=new Node(carry); break;}
+            first=first.next;
+            if(second!=null)second=second.next;
+        }
+        first=reverse(temp);
+        return first;
+    }
+    static Node reverse(Node head){
+        Node temp=null,prev=null;
         while(head!=null){
-            p=head.next;
+            temp=head.next;
             head.next=prev;
             prev=head;
-            head=p;
+            head=temp;
         }
         return prev;
     }
-    static Node addTwoLists(Node first, Node second){
-        int c1=0,c2=0;
-        Node h1=first,h2=second;
-        while(h1!=null){h1=h1.next;c1++;}
-        while(h2!=null){h2=h2.next;c2++;}
-        if(c1>=c2){h1=rev(first);h2=rev(second);}
-        else{h1=rev(second);h2=rev(first);}
-        c1=0;
-        c2=0;
-        Node sol=h1;
-        while(h2.next!=null){
-            c2=h1.data+h2.data+c1;
-            h1.data=c2%10;
-            c1=c2/10;
-            h1=h1.next;
-            h2=h2.next;
-        }
-        c2=h1.data+h2.data+c1;
-        h1.data=c2%10;
-        c1=c2/10;
-        if(c1!=0 ){
-            if(h1.next==null) h1.next=new Node(0);
-            h1.next.data+=c1;
-            h1=h1.next;
-        }
-        while(h1.data>=10){
-            if(h1.next==null) {
-                h1.next=new Node(h1.data/10);
-            }
-            else h1.next.data+=h1.data/10;
-            h1.data%=10;
-            h1=h1.next;
-        }
-        sol=rev(sol);
-        return sol;
+    static int length(Node head){
+        int c=0;
+        for(;head!=null;head=head.next)c++;
+        return c;
     }
 }
 ```  
