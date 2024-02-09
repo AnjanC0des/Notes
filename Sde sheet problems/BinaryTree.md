@@ -234,40 +234,32 @@ Given a Binary Tree, The task is to print the bottom view from left to right. A 
 - Space complexity: $O(n)$ 
 
 ```java
-class Solution
-{
+class Solution{
     //Function to return a list containing the bottom view of the given tree.
-    void width(Node node, int i, int[] dim){
+    public ArrayList <Integer> bottomView(Node root){
+        int[] l=new int[2];
+        findWidth(root,l,0);
+        ArrayList sol=new ArrayList<Integer>(), h=new ArrayList<Integer>();
+        for(int i=0;i<-1*l[0]+l[1]+1;i++){sol.add(0);h.add(0);}
+        traverse(root,sol,h,-1*l[0],0);
+        return sol;
+        
+    }
+    //Treverses the binary tree and at each point along the width of the binary
+    //check if the lowermost node is visible.
+    void traverse(Node node,ArrayList<Integer> sol,ArrayList<Integer> height,int i,int h){
         if(node==null) return;
-        if(i<dim[0]) dim[0]=i;
-        if(i>dim[1]) dim[1]=i;
-        if(node.left!=null) width(node.left,i-1,dim);
-        if(node.right!=null) width(node.right,i+1,dim);
+        if(sol.get(i)==0 ||height.get(i)<=h) {sol.set(i,node.data);height.set(i,h);}
+        traverse(node.left,sol,height,i-1,h+1);
+        traverse(node.right,sol,height,i+1,h+1);
     }
-    void func(Node root, HashMap<Integer,Integer> map, ArrayList<Integer> arr, int h, int i){
+    //Finds the width of the binary tree. 
+    void findWidth(Node root,int[] l,int i){
         if(root==null) return;
-        if(arr.get(i)==0){
-            arr.set(i,root.data);
-            map.put(i,h);
-        }
-        else{
-            if(h>=map.get(i)){
-                arr.set(i,root.data);
-                map.put(i,h);
-            }
-        }
-        func(root.left,map,arr,h+1,i-1);
-        func(root.right,map,arr,h+1,i+1);
-    }
-    public ArrayList <Integer> bottomView(Node root)
-    {
-        int[] dim=new int[2];
-        width(root,0,dim);
-        ArrayList<Integer> arr=new ArrayList<Integer>();
-        for(int i=0;i<dim[1]-dim[0]+1;i++) arr.add(0);
-        HashMap<Integer,Integer> map=new HashMap<Integer,Integer>();
-        func(root,map,arr,0,0-dim[0]);
-        return arr;
+        if(i<l[0]) l[0]=i;
+        if(i>l[1]) l[1]=i;
+        length(root.left,l,i-1);
+        length(root.right,l,i+1);
     }
 }
 ```  
