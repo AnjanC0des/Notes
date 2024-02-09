@@ -147,16 +147,15 @@ Given a Binary Tree. Check whether it is Symmetric or not, i.e. whether the bina
 - Space complexity: $O(h)$ 
 
 ```java
-class GfG
-{
-    static boolean func(Node node1,Node node2){
-        if(node1==null && node2==null) return true;
-        if(node1!=null && node2!=null && node1.data==node2.data) return func(node1.left,node2.right) && func(node1.right,node2.left);
-        return false;
+class GfG{
+    public static boolean isSymmetric(Node root){
+        if(root==null) return true;
+        return sym(root.left,root.right);
     }
-    public static boolean isSymmetric(Node root)
-    {
-        return func(root,root);
+    static boolean sym(Node left,Node right){
+        if(left==null && right==null) return true;
+        if((left==null ^ right==null)||(left.data!=right.data)) return false;
+        return sym(left.left,right.right) && sym(left.right,right.left);
     }
 }
 ```  
