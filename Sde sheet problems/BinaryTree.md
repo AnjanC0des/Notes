@@ -97,13 +97,29 @@ class Tree
 Given a binary tree, find if it is height balanced or not. 
 A tree is height balanced if difference between heights of left and right subtrees is not more than one for all nodes of tree. 
 
+A balanced binary tree:
+
+           1
+        /     \
+      10      39
+     /
+    5
+
+An unbalanced tree
+
+         1
+        /    
+      10   
+     /
+    5
+
 **Intuition** :
 
-
+We just have to check the difference in height between the left and right subtree.
 
 **Approach** :
 
-
+Write a height function, and then at each node check if the difference if height between the left and right subtree is one or zero.
 
 **Complexity** :  
 
