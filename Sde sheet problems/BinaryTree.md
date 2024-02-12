@@ -251,13 +251,35 @@ class Tree
 
 Given a Binary Tree, The task is to print the bottom view from left to right. A node x is there in output if x is the bottommost node at its horizontal distance. The horizontal distance of the left child of a node x is equal to a horizontal distance of x minus 1, and that of a right child is the horizontal distance of x plus 1. 
 
+                      20
+                    /    \
+                  8       22
+                /   \        \
+              5       3       25
+                    /   \      
+                  10      14
+
+For the above tree, the bottom view is 5 10 3 14 25.
+
+If there are multiple bottom-most nodes for a horizontal distance from root, then print the later one in level traversal. For example, in the below diagram, 3 and 4 are both the bottommost nodes at horizontal distance 0, we need to print 4.
+
+                      20
+                    /     \
+                  8        22
+                /   \     /   \
+              5       3 4      25
+                     /    \      
+                  10       14
+
+For the above tree the output should be 5 10 4 14 25.
+
 **Intuition** :
 
-
+For each unit of length we need to store the lowest and latest node.
 
 **Approach** :
 
-
+Make a function that calculates the width of the tree and make an array of that length to store the solution, also init an array to store the height of nodes in the solution array . While traversing down the tree, keeping track of the height, when we encounter a node, if the solution array doesnt have a node at this index along the length, or if the current node has a height greater than equal to the current node, we update the node in the solution array and its height in the height array. We return the solution array. 
 
 **Complexity** :  
 
