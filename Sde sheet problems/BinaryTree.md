@@ -11,7 +11,7 @@
 ## Binary Tree
 
 ## Contents
-
+1. [Height of binary tree](#height-of-binary-treehttpspracticegeeksforgeeksorgproblemsheightofbinarytree1)
 ### Approaches:
 * ** ** :  
 E.g.:  
