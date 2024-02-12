@@ -375,6 +375,12 @@ class Solution {
 
 Given a Binary Tree, The task is to connect all the adjacent nodes at the same level starting from the left-most node of that level, and ending at the right-most node using nextRight pointer by setting these pointers to point the next right for each node.
 
+        10                          10 ------> NULL
+       / \                        /     \
+      3   5       =>            3 ------> 5 --------> NULL
+     / \   \                  /  \           \
+    4   1   2                4 --> 1 ----->   2 -------> NULL
+
 **Intuition** :
 
 
@@ -392,28 +398,17 @@ Given a Binary Tree, The task is to connect all the adjacent nodes at the same l
 ```java
 class Solution
 {
-    int height(Node root,int h){
-        if(root==null) return h;
-        return Math.max(height(root.left,h+1),height(root.right,h+1));
-    }
     //Function to connect nodes at same level.
-    void makeList(Node root, int h,Node[] arr){
-        if(root==null)return ;
-        if(arr[h]==null) arr[h]=root;
-        else{
-            arr[h].nextRight=root;
-            arr[h]=arr[h].nextRight;
-        }
-        makeList(root.left,h+1,arr);
-        makeList(root.right,h+1,arr);
-    }
     public void connect(Node root)
     {
-        int h;
-        h=height(root,0);
-        Node[] arr=new Node[h];
-        for(int i=0;i<h;i++) arr[i]=null;
-        makeList(root,0,arr);
+        connect(root,new ArrayList<Node>(),0);
+    }
+    public void connect(Node node,ArrayList<Node> lists,int h){
+        if(node==null)return;
+        if(h+1>lists.size()) lists.add(node);
+        else {lists.get(h).nextRight=node; lists.set(h,node);}
+        connect(node.left,lists,h+1);
+        connect(node.right,lists,h+1);
     }
 }
 ```  
