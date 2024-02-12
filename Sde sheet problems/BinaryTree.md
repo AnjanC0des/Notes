@@ -438,33 +438,55 @@ class Spiral
 {
     //Function to return a list containing the level order 
     //traversal in spiral form.	
-    int height(Node root, int h){
-        if(root==null) return h;
-        return(Math.max(height(root.left,h+1),height(root.right,h+1)));
-    }
-    void makeSpiral(Node root, int h, ArrayList<LinkedList<Integer>> arr ){
-        if(root==null) return;
-        arr.get(h).addLast(root.data);
-        makeSpiral(root.left,h+1, arr);
-        makeSpiral(root.right,h+1, arr);
-    }
-    ArrayList<Integer> findSpiral(Node root) 
-    {
-        int h;
-        h=height(root,0);
-        ArrayList<LinkedList<Integer>> arr= new ArrayList<LinkedList<Integer>>();
-        for(int i=0;i<h;i++) arr.add(new LinkedList<Integer>());
-        ArrayList<Integer> sol=new ArrayList<Integer>();
-        makeSpiral(root,0,arr);
-        Iterator iter;
-        for(int i=0;i<h;i++){
-            if(i%2!=0) iter=arr.get(i).listIterator();
-            else iter=arr.get(i).descendingIterator();
-            while(iter.hasNext()) sol.add((Integer)iter.next());
+    ArrayList<Integer> findSpiral(Node root){
+        ArrayList sol=new ArrayList<Integer>();
+        ArrayList<ArrayList<Integer>> map=new ArrayList<ArrayList<Integer>>();
+        func(root,map,0);
+        for(int i=0;i<map.size();i++){
+            if(i%2==0) Collections.reverse(map.get(i));
+            sol.addAll(map.get(i));
         }
         return sol;
     }
+    void func(Node node,ArrayList<ArrayList<Integer>> map,int h){
+        if(node==null) return;
+        if(h+1>map.size()) map.add(new ArrayList<Integer>(List.of(node.data)));
+        else map.get(h).add(node.data);
+        func(node.left,map,h+1);
+        func(node.right,map,h+1);
+    }
 }
+// class Spiral
+// {
+//     //Function to return a list containing the level order 
+//     //traversal in spiral form.	
+//     int height(Node root, int h){
+//         if(root==null) return h;
+//         return(Math.max(height(root.left,h+1),height(root.right,h+1)));
+//     }
+//     void makeSpiral(Node root, int h, ArrayList<LinkedList<Integer>> arr ){
+//         if(root==null) return;
+//         arr.get(h).addLast(root.data);
+//         makeSpiral(root.left,h+1, arr);
+//         makeSpiral(root.right,h+1, arr);
+//     }
+//     ArrayList<Integer> findSpiral(Node root) 
+//     {
+//         int h;
+//         h=height(root,0);
+//         ArrayList<LinkedList<Integer>> arr= new ArrayList<LinkedList<Integer>>();
+//         for(int i=0;i<h;i++) arr.add(new LinkedList<Integer>());
+//         ArrayList<Integer> sol=new ArrayList<Integer>();
+//         makeSpiral(root,0,arr);
+//         Iterator iter;
+//         for(int i=0;i<h;i++){
+//             if(i%2!=0) iter=arr.get(i).listIterator();
+//             else iter=arr.get(i).descendingIterator();
+//             while(iter.hasNext()) sol.add((Integer)iter.next());
+//         }
+//         return sol;
+//     }
+// }
 ```  
 ---  
 
