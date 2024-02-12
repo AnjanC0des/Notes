@@ -147,14 +147,30 @@ class Tree{
 **Question** :
 
 Given a Binary Tree. Check whether it is Symmetric or not, i.e. whether the binary tree is a Mirror image of itself or not.
+Example of a symmetric binary tree: 
+
+         5
+       /   \
+      1     1
+     /       \
+    2         2
+
+Exmaple of a non symmetric binary tree:
+
+         5
+       /   \
+      10     10
+     /  \     \
+    20  20     30
+
 
 **Intuition** :
 
-
+We have to travel down both the subtrees and check for symmetry.
 
 **Approach** :
 
-
+Travelling down the left subtree we check if the a similar symmetric node exists down the right subtree as well and if not return false. 
 
 **Complexity** :  
 
@@ -184,7 +200,7 @@ Given a Binary Tree, print Left view of it. Left view of a Binary Tree is set of
 
 Left view of following tree is 1 2 4 8.
 
-          1
+           1
         /     \
        2       3
      /  \    /   \
@@ -194,11 +210,11 @@ Left view of following tree is 1 2 4 8.
 
 **Intuition** :
 
-
+Preorder traversal to save the leftmost node at each height.
 
 **Approach** :
 
-
+Write a height function that calculates the max height for a tree and init an array of that size. Do a preorder traversal and save the first node encountered at each level.
 
 **Complexity** :  
 
