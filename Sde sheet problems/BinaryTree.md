@@ -434,10 +434,7 @@ Given a Binary Tree, the task is to print the Level order traversal of the Binar
 - Space complexity: $O(n)$ 
 
 ```java
-class Spiral
-{
-    //Function to return a list containing the level order 
-    //traversal in spiral form.	
+class Spiral{	
     ArrayList<Integer> findSpiral(Node root){
         ArrayList sol=new ArrayList<Integer>();
         ArrayList<ArrayList<Integer>> map=new ArrayList<ArrayList<Integer>>();
