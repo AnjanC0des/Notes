@@ -11,15 +11,14 @@
 ## Binary Tree
 
 ## Contents
-1. [Height ](#height-of-binary-tree)
+
 ### Approaches:
 * ** ** :  
 E.g.:  
     *   
 
 ### Problems:
-#### Height of Binary Tree
-[GFG](https://practice.geeksforgeeks.org/problems/height-of-binary-tree/1)
+1. #### [Height of Binary Tree](https://practice.geeksforgeeks.org/problems/height-of-binary-tree/1)
 
 **Question** :
 
