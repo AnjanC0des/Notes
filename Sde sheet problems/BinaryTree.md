@@ -326,6 +326,18 @@ class Solution{
 
 The diameter of a tree (sometimes called the width) is the number of nodes on the longest path between two end nodes. The diagram below shows two trees each with diameter nine, the leaves that form the ends of the longest path are shaded (note that there is more than one path in each tree of length nine, but no path longer than nine nodes). 
 
+       1
+     /  \
+    2    3
+Output: 3
+
+         10
+        /   \
+      20    30
+     /   \ 
+    40   60
+Output: 4
+
 **Intuition** :
 
 
@@ -343,22 +355,18 @@ The diameter of a tree (sometimes called the width) is the number of nodes on th
 ```java
 class Solution {
     // Function to return the diameter of a Binary Tree.
-    int func(Node root, int h, int[] max){
-        if(root==null) return h;
-        if(root.left==null && root.right==null) return h+1;
-        h+=1;
-        int h1=func(root.right,h,max);
-        int h2=func(root.left,h,max);
-        if(h2+h1+1-2*h>max[0]) max[0]= h2+h1+1-2*h;
-        return Math.max(h2,h1);
-    }
     int diameter(Node root) {
-        int []max={1};
-        func(root,0,max);
+        int[] max=new int[1];
+        diameter(root,max);
         return max[0];
     }
+    int diameter(Node node,int[] max){
+        if(node==null) return 0;
+        int left=diameter(node.left,max), right=diameter(node.right,max);
+        if(left+right+1>max[0]) max[0]=left+right+1;
+        return Math.max(left,right)+1;
+    }
 }
-
 ```  
 ---  
 8. #### [Connect Nodes at Same Level](https://practice.geeksforgeeks.org/problems/connect-nodes-at-same-level/1) :
