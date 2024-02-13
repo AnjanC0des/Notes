@@ -23,13 +23,10 @@ E.g.:
 
 Given a binary tree, find its height.
 
-**Intuition** :
-
-
 
 **Approach** :
 
-
+Return "h" for null node and for other cases return recursive function with value of "h" increased by one. Eventually max "h" will be pass through. 
 
 **Complexity** :  
 
@@ -66,13 +63,9 @@ Given a Binary Tree of size N, You have to count leaves in it. For example, ther
      /
     5
 
-**Intuition** :
-
-
-
 **Approach** :
 
-
+Returning 0 for a null node and 1 for a leaf node, and on other cases returning the sum of number of leaf nodes returned from left and right subtrees.
 
 **Complexity** :  
 
@@ -338,13 +331,9 @@ Output: 3
     40   60
 Output: 4
 
-**Intuition** :
-
-
-
 **Approach** :
 
-
+For each node we have to check if the sum of depths of left and right subtrees is greater than max and update max accordingly.
 
 **Complexity** :  
 
@@ -381,13 +370,10 @@ Given a Binary Tree, The task is to connect all the adjacent nodes at the same l
      / \   \                  /  \           \
     4   1   2                4 --> 1 ----->   2 -------> NULL
 
-**Intuition** :
-
-
 
 **Approach** :
 
-
+We make a arraylist of nodes whose index reflect the height. In the arraylist we store the latest visited node at that height. When visit another node at the same height we attach the last visited node to the new node and update the new node in the array.
 
 **Complexity** :  
 
@@ -418,6 +404,14 @@ class Solution
 **Question** :
 
 Given a Binary Tree, the task is to print the Level order traversal of the Binary Tree in spiral form i.e, alternate order.
+
+           10
+         /     \
+        20     30
+      /    \
+    40     60
+    
+Output: 10 20 30 60 40 
 
 **Intuition** :
 
