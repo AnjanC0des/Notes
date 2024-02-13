@@ -36,18 +36,24 @@ Return "h" for null node and for other cases return recursive function with valu
 
 ```java
 class Solution {
-    //Function to find the height of a binary tree.
-    int height(Node node,int... h) 
-    {
-        if(node==null && h.length==0) return 0;
-        
-        if(h.length==0) return Math.max(height(node.left,1),height(node.right,1));
-        
-        if(node==null) return h[0];
-        
-        return Math.max(height(node.left,h[0]+1),height(node.right,h[0]+1));
+    int height(Node node){
+        return height(node,0);
+    }
+    int height(Node node,int h) {
+        if(node==null) return h;
+        return Math.max(height(node.left,h+1),height(node.right,h+1));
     }
 }
+
+// Alternate code with variable arguments.
+// class Solution {
+//     int height(Node node,int... h) {
+//         if(node==null && h.length==0) return 0;
+//         if(h.length==0) return Math.max(height(node.left,1),height(node.right,1));
+//         if(node==null) return h[0];
+//         return Math.max(height(node.left,h[0]+1),height(node.right,h[0]+1));
+//     }
+// }
 ```  
 ---  
 
@@ -447,6 +453,7 @@ class Spiral{
         func(node.right,map,h+1);
     }
 }
+// Alternate code using list aiterator and descending iterator.
 // class Spiral
 // {
 //     //Function to return a list containing the level order 
