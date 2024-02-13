@@ -192,20 +192,12 @@ Given a string str and another string patt. Find the character in patt that is p
 - Space complexity: $O(n)$ 
 
 ```java
-class Solution
-{
-    //Function to find the minimum indexed character.
-    public static int minIndexChar(String str, String patt)
-    {
-        int[] arr=new int[256];
-        for(int i=0;i<arr.length;i++) arr[i]=-1;
+class Solution{
+    public static int minIndexChar(String str, String patt){
+        HashSet<Character> set=new HashSet<Character>();
         int min=Integer.MAX_VALUE;
-        for(int i=str.length()-1;i>=0;i--){
-            arr[str.charAt(i)]=i;
-        }
-        for(char x:patt.toCharArray()){
-            if(arr[x]!=-1 && arr[x]<min) min=arr[x];
-        }
+        for(int i=0;i<patt.length();i++) set.add(patt.charAt(i));
+        for(int i=0;i<str.length();i++) if(set.contains(str.charAt(i)) && i<min){ min=i; break;}
         return min==Integer.MAX_VALUE?-1:min;
     }
 }
