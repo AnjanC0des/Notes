@@ -158,17 +158,16 @@ For i varying from 0 to min, if character at i of a string differs from others, 
 ```java
 class Solution{
     String longestCommonPrefix(String arr[], int n){
-        int min=Integer.MAX_VALUE;
-        for(int i=0;i<n;i++) if(arr[i].length()<min) min= arr[i].length();
-        int i;
-        for(i=0;i<min;i++){
+        int c=0;
+        for(int i=0;i<arr[0].length();i++){
             for(int j=1;j<n;j++){
-                if(arr[j].charAt(i)!=arr[0].charAt(i)) return i==0? "-1":arr[0].substring(0,i);
+                if(i>=arr[j].length() || arr[0].charAt(i)!=arr[j].charAt(i)) 
+                    return c==0?"-1":arr[0].substring(0,c);
             }
+            c++;
         }
-        return arr[0].substring(0,i);
+        return c==0?"-1":arr[0].substring(0,c);
     }
-    
 }
 ```  
 ---  
