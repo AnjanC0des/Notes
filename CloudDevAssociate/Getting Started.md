@@ -82,18 +82,32 @@ example of regional services: ec2, elastic beanstalk, lambda
 * We can check usage and be more effective in access management through iam credential reports and iam access advisor.
 * They are part of iam security and access management tools.
 
-#### EC2
+### EC2
 * EC2(Elastic compute cloud) is one of the main services offered by aws.
 * EC2 is used in conjuntion with services such as ebs(elastic block store) to store data, elb(elastic load balancer) to distribute load across various ec2 instances, asg(auto scaling group) to scale the services up or down when needed.
 * EC2 instances can be configured as follows:
- * OS : the operating system running on the insatance
- * CPU : the compute power and number of cores used
- * ram
- * storage
-  * Network attachedw(ebs/efs) or hardware of ec2 itself
- * Network card- speed and public ip address
- * firewall rules - security groups
- * bootstrap scripts(ec2 user data scripts)- scipts that run when the instances are initialised to set up the instance
+   * OS : the operating system running on the insatance
+   * CPU : the compute power and number of cores used
+   * ram
+   * storage
+     * Network attachedw(ebs/efs) or hardware of ec2 itself
+   * Network card- speed and public ip address
+   * firewall rules - security groups
+   * bootstrap scripts(ec2 user data scripts)- scipts that run when the instances are initialised to set up the instance
+* We can access our ec2 instance through ssh if it is configured to accecpt a ssh connection. SSH connection can be done from the terminal but we need the key pair produced during the instance creation.
+* We can also access our instance through the ec2 instance connect from the ec2 instances page. Security groups must be configured to accecpt ssh connection for this to work.
+* We can also attach roles to ec2 instances from the instances page.
+* We can also choose how we are billed for ec2 instances. Different payment plans are as follows:
+   * On-demand: This is the base price of the instances with 0% discount and we are billed per second. We pay as we use. This is best when we dont know which instances we are using and we are using the service for a short period of time.
+   * Reserved instances: Instances can be reserved for 1 or 3 years. We also have a choice for reserved instances and reserved and convertible instances. This is best when we know we have a great workload and we reserve instances for 1 or 3 years. 72% discount.
+   * Savings plan : We commit to duration of usage 1 or 3 years and we use this when we know of the duration of usage but not the type of instances we would be using. We lock in on a certain instance family and aws region. 72% discount.
+   * Spot instances: These are piss cheap instances that we can loose at any time if someone else bids a higher price for them and are suitable for jobs that are not affected by instances shutting off randomly. 90% discount.
+   * Dedicated hosts : We get a whole physical host to ourselves and this is used when we need more low level access or when our billability/licensing is associated with dedicated host. Purchasing options can be on demand or reserved(1 or 3 years). This is the most expensive option. Reservation on dedicated hosts can gice us upto 70% discounts.
+   * Dedicated instances : Other hosts wont share our harware.
+   * Reserved instances : We reserve instances in a certain az and pay for them even if we dont use them. No time commitments and billing discounts.
+
+### EBS
+
  
 
 
