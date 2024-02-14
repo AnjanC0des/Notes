@@ -77,6 +77,8 @@ Take two nodes **prev and p**.
 While head is not null, set p as head.next, head.next as prev, prev as head and head as p. This is the process of reversing the next links.  
 Return p.
 
+<img src="./Illustrations/ll2.gif" width="576" height="324" />
+
 **Complexity** :  
 
 - Time complexity: $O(n)$  
