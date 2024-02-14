@@ -38,7 +38,7 @@ Else return slow.
 
 ![Find middle element of linked list](./Illustrations/ll1.gif)
 
-<img src="./Illustrations/ll1.gif" width="300" height="200" />
+<img src="./Illustrations/ll1.gif" width="576" height="324" />
 
 **Complexity** :  
 
