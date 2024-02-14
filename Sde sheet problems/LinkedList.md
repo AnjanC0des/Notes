@@ -38,8 +38,6 @@ Else return slow.
 
 <img src="./Illustrations/ll1.gif" width="576" height="324" />
 
-![ll](./Illustrations/ll1.gif)
-
 **Complexity** :  
 
 - Time complexity: $O(n)$  
