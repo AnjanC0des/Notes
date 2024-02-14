@@ -36,6 +36,8 @@ Iterate while **fast.next and fast.next.next are not null** by updating **fast a
 If after coming out of loop, **fast.next != null and fast.next.next is null**, that means length of list is even and as defined in the question return second middle element, so return slow.next.
 Else return slow.
 
+![Find middle element of linked list](./Illustrations/ll1.gif)
+
 **Complexity** :  
 
 - Time complexity: $O(n)$  
