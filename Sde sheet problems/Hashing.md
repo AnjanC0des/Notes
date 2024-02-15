@@ -237,24 +237,21 @@ Given a sorted array in which all elements appear twice (one after one) and one 
 - Space complexity: $O(1)$ 
 
 ```java
-class Sol
-{
-    public static int search(int arr[], int N)
-    {
-        int i=0,j=N-1,length,mid=0;
-        while(i<j-1){
-            length=j-i+1;
-            mid=i+(j-i)/2;
-            if((length/2)%2!=0) {
-                if(arr[mid+1]==arr[mid]) j=mid-1;
-                else i=mid+1;
+class Sol{
+    public static int search(int arr[], int N){
+        int start=0,end=N-1,mid=0;
+        while(start<end){
+            mid=start+(end-start)/2;
+            if((mid-start)%2!=0){
+                if(arr[mid+1]==arr[mid]) end=mid-1;
+                else start=mid+1;
             }
             else{
-                if(arr[mid+1]==arr[mid]) i=mid;
-                else j=mid;
+                if(arr[mid+1]==arr[mid]) start=mid;
+                else end=mid;
             }
         }
-        return arr[i];
+        return arr[start];
     }
 }
 ```  
