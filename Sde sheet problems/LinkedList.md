@@ -73,9 +73,9 @@ Moving from head to tail of list, keep reversing the links and at the end return
 
 **Approach** :
 
-Take two nodes **prev and p**.  
-While head is not null, set p as head.next, head.next as prev, prev as head and head as p. This is the process of reversing the next links.  
-Return p.
+Take two nodes **prev and next**.  
+While head is not null, set next as head.next, head.next as prev, prev as head and head as next.  
+Return prev.
 
 <img src="./Illustrations/ll2.gif" width="576" height="324" />
 
