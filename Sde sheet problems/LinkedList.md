@@ -1,4 +1,3 @@
-
 <img src="./Illustrations/ll.gif" />
 
 <div>
