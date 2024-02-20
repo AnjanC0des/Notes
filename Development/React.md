@@ -8,7 +8,9 @@
 <div style="font-family: 'Whisper', cursive;">
 
 # React.js
+
 <img src="./Illustrations/React.gif" width="576" height="324" />
+
 ## Contents
 * [Setup](#sparkles-setup)
 * [Components](#sparkles-components)
