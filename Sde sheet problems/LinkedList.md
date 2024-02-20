@@ -1,5 +1,5 @@
 
-<img src="./Illustrations/ll.gif" width="576" height="324" />
+<img src="./Illustrations/ll.gif" />
 
 <div>
 
