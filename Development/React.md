@@ -9,7 +9,7 @@
 
 # React.js
 
-<img src="./Illustrations/ll1.gif" height="324" object-position="center"/>
+<img src="./Illustrations/React.gif" width = "1152" height="162" object-position="50% 50%" object-fit="cover"/>
 
 ## Contents
 * [Setup](#sparkles-setup)
