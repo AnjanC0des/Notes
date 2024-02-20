@@ -7,7 +7,7 @@
 
 <div style="font-family: 'Whisper', cursive;">
 
-# React notes
+# React.js
 
 ## Contents
 * [Setup](#sparkles-setup)
