@@ -7,8 +7,6 @@
 
 <div style="font-family: 'Whisper', cursive;">
 
-# React.js
-
 <img src="./Illustrations/React.gif"   />
 
 ## Contents
