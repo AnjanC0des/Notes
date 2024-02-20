@@ -30,7 +30,7 @@ Iterate while **fast.next and fast.next.next are not null** by updating **fast a
 If after coming out of loop, **fast.next != null and fast.next.next is null**, that means length of list is even and as defined in the question return second middle element, so return slow.next.
 Else return slow.
 
-<img src="./Illustrations/ll.gif" width="576" height="324" />
+<img src="./Illustrations/Ll.gif" width="576" height="324" />
 
 **Complexity** :  
 
@@ -71,7 +71,7 @@ Take two nodes **prev and next**.
 While head is not null, set next as head.next, head.next as prev, prev as head and head as next.  
 Return prev.
 
-<img src="./Illustrations/reversell.gif" width="576" height="324" />
+<img src="./Illustrations/Reversell.gif" width="576" height="324" />
 
 **Complexity** :  
 
