@@ -7,7 +7,10 @@
 
 <div style="font-family: 'Whisper', cursive;">
 
+---
 <img src="./Illustrations/React.gif"   />
+
+---
 
 ## Contents
 * [Setup](#sparkles-setup)
