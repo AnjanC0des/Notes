@@ -123,12 +123,12 @@ Iterating through the array, **check if Array[character] is 1**,i.e., **if you h
 ```java
 class Solution {
     String removeDups(String S) {
-        int [] arr=new int[256];
-        String sol="";
+        StringBuilder sb=new StringBuilder();
+        HashSet<Character> set=new HashSet<Character>();
         for(int i=0;i<S.length();i++){
-            if(arr[S.charAt(i)]!=1) {sol+=S.charAt(i);arr[S.charAt(i)]=1;}
+            if(!set.contains(S.charAt(i))){sb.append(S.charAt(i));set.add(S.charAt(i));}
         }
-        return sol;
+        return sb.toString();
     }
 }
 ```  
