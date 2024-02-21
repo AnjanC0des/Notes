@@ -68,9 +68,11 @@ Given a set of time intervals in any order, merge all overlapping intervals into
 For example,
 
 Intervals = {{1,3},{2,4},{6,8},{9,10}}
+
 Output: {{1, 4}, {6, 8}, {9, 10}}
 
 Intervals = {{6,8},{1,9},{2,4},{4,7}}
+
 Output: {{1, 9}}
 
 **Intuition** :
@@ -121,6 +123,7 @@ class Solution
 The stock span problem is a financial problem where we have a series of N daily price quotes for a stock and we need to calculate the span of the stock’s price for all N days. The span Si of the stock’s price on a given day i is defined as the maximum number of consecutive days just before the given day, for which the price of the stock on the current day is less than its price on the given day.
 
 price[] = [100 80 60 70 60 75 85] 
+
 Output: 1 1 1 2 1 4 6
 
 **Intuition** :
@@ -167,6 +170,11 @@ class Solution
 Given an array arr[ ] of size N having elements, the task is to find the next greater element for each element of the array in order of their appearance in the array.
 Next greater element of an element in the array is the nearest element on the right which is greater than the current element.
 If there does not exist next greater of current element, then next greater element for current element is -1. For example, next greater of the last element is always -1.
+
+arr[]= [6 8 0 1 3]
+
+Output:
+8 -1 1 3 -1
 
 **Intuition** :
 
