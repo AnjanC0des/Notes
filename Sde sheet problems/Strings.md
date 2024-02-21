@@ -124,6 +124,7 @@ Iterating through the array, **check if Array[character] is 1**,i.e., **if you h
 class Solution {
     String removeDups(String S) {
         StringBuilder sb=new StringBuilder();
+        //Lookup table using an array can also be used instead of a hashmap
         HashSet<Character> set=new HashSet<Character>();
         for(int i=0;i<S.length();i++){
             if(!set.contains(S.charAt(i))){sb.append(S.charAt(i));set.add(S.charAt(i));}
