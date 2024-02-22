@@ -72,7 +72,7 @@
 * Often to share our work, or to reduce disk occupied disk space we delete the node modules folder of the project.
 * We can regain this folder using **npm install** in the project directory, given the package.json is present.
 * We run the project using **npm start** which opens up the project in the browser.
-* React code is written in **JSX**.
+* React code is written in **JSX**. This is a html in js mix syntax. In React using jsx we can also import assets like image,css files into the jsx file. More [here](https://react.dev/learn/writing-markup-with-jsx).
 * React embraces **declarative** way of writing code, where we just define the starting and final states and React takes care of heavy lifting behind the scenes.
 * React creates a **virtual dom** that finalises the changes before doing them in DOM of browser to make the process fast.
 
