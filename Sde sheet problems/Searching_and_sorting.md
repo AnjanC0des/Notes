@@ -7,7 +7,8 @@
 
 <div>
 
-# SDE sheet problems
+<img src="./Illustrations/sde.gif"/>
+
 ## Searching and Sorting
 ### Approaches:
 * **Binary Search** :  
