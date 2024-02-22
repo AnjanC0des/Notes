@@ -7,7 +7,8 @@
 
 <div>
 
-# SDE sheet problems
+<img src="./Illustrations/sde.gif"/>
+
 ## Binary Tree
 
 
