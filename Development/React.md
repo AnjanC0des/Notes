@@ -166,6 +166,68 @@ const CustomComponent=(props)=>{
 export default CustomComponent;
 ```
 
+* We can also use destructuring to pass the attributes as props.
+
+For example here we use the data from an object array and pass the properties of the object as props using destructuring in the App.jsx.
+
+data.jsx:
+
+```jsx
+export const CORE_CONCEPTS = [
+  {
+    title: "Components",
+    description:
+      "The core UI building block - compose the user interface by combining multiple components.",
+  },
+  {
+    title: "JSX",
+    description:
+      "Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered.",
+  },
+  {
+    title: "Props",
+    description:
+      "Make components configurable (and therefore reusable) by passing input data to them.",
+  },
+  {
+    title: "State",
+    description:
+      "React-managed data which, when changed, causes the component to re-render & the UI to update.",
+  },
+];
+```
+
+App.jsx:
+
+```jsx
+import { CORE_CONCEPTS } from "./data";
+import DataComponent from "./DataComponent";
+function App() {
+  let c = 0;
+  return (
+    <div>
+      {CORE_CONCEPTS.map((item) => (
+        <DataComponent {...item} key={c++} />
+      ))}
+    </div>
+  );
+}
+export default App;
+```
+
+DataComponent.jsx:
+
+```jsx
+export default (props) => {
+  return (
+    <>
+      <p>{props.title + "\n"}</p>
+      <p>{props.description + "\n"}</p>
+    </>
+  );
+};
+```
+
 ### :sparkles: Splitting Components
 
 * While working with components, it is always recommended to keep each component small and managable.
