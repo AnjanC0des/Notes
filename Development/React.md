@@ -218,11 +218,11 @@ export default App;
 DataComponent.jsx:
 
 ```jsx
-export default (props) => {
+export default ({title,description}) => {
   return (
     <>
-      <p>{props.title + "\n"}</p>
-      <p>{props.description + "\n"}</p>
+      <p>{title + "\n"}</p>
+      <p>{description + "\n"}</p>
     </>
   );
 };
