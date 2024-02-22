@@ -6,7 +6,8 @@
 
 <div>
 
-# SDE sheet problems
+<img src="./Illustrations/sde.gif"/>
+
 ## Hashing
 ### Approaches:
 * ** ** :  
