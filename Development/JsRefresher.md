@@ -1,5 +1,10 @@
 <img src="./Illustrations/JsRefresher.gif" />
 
+## Note
+
+The following content is what was covered as part of Max's course and is not exhaustive.
+For holistic js information, always refer the [docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+
 ## Adding Js to a html file
 * Js can be added to a html file using <script> tags(cumbersome unless script is small), by writing js code directly in the tags or linking a js file using the tag(more maintainable).
 * Script tags are not self closing and we need both opening and closing tags.
@@ -57,6 +62,9 @@ console.log("finished");
 
 ## Values and variables and constants
 
+[Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+[More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+
 * There are different types of values such as strings, numbers, boolean, null and undefined and also an object value.
 * Variable store values, has name of your choice, have reusability and readability.
 * Variables created using **let** keyword and must follow some rules
@@ -79,6 +87,9 @@ console.log(dataPoint);
 
 ## Operators
 
+[Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
+[More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+
 * **+,-,*,/** can be used for math operations. **+** opearator is also used for string concatenations. Other comaparison operations include **<,>,<=,>=** etc.
 * **===** operator is used to check for equality without type coersion, whereas **==** compares values with type coersion. Both yeild boolean value.
 
@@ -90,6 +101,9 @@ console.log(a === b); //false
 ```
 
 ## Functions
+
+[Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+[More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
 * A code block being executed when being called and as often being called helps in modularity decreases repetition.
 * It can be created using the function keyword or the arrow function syntax, the arrow fucntion syntax being the more modern way to do it.
@@ -137,7 +151,30 @@ console.log(func4(53)); //106
 console.log(func5("Hillary", 69)); //{name: 'Hillary', age: 69}
 ```
 
+* Functions can also recieve other functions are arguments, like setTimeout() function. Functions can also be defined inside other functions. These functions defined inside the scope of other functions are called scoped functions.
+
+```js
+setTimeout(()=>{
+console.log("Timed message");
+},2000);
+//Timed message after 2 seconds
+
+const parentFunction=()=>{
+  const childFunction=()=>{
+    console.log("Hello from Child function!");
+  }
+  childFunction();
+}
+
+parentFunction();
+//Hello form Child function!
+```
+* 
+
 ## Objects and Classes
+
+[Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects) and [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_classes) docs.
+[More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
 * Objects are a collection that can contains value and functions. The values in the object are called as properties and the functions in the object is called as methods.
 * The properties of the object can be accessed in the methods using the **this** keyword.
@@ -185,6 +222,9 @@ newDev.sayAge(); //I am 24 years of age
 
 ## Arrays and Array methods
 
+[Docs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays)
+[More](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
 * Arrays are meant to store data(values, arrays, objects, etc) in a serialised format.
 * We can access array element using indexing,slicing, etc.
 * Some frequently used array methods in JavaScript are:
@@ -209,7 +249,8 @@ newDev.sayAge(); //I am 24 years of age
   Many of these functions take different values or anonymous functions as arguments to do opearations on the array.
 
 ## Destructuring and spreading
-
+[Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+[Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 * We can destructure arrays and objects to pull values faster.
 * Arrays are destructured by index and hence we can give any name to the destructured variables, but since objects are destructured by keys, we need to destructure using key names. We can assign aliases to them later tho.
 
@@ -260,5 +301,59 @@ console.log(paula);
 console.log(paulb);
 //{ name: "Paul Atreides", title: "Kwisatz Haderach" }
 ```
+
+## Control Structures
+[Control Structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+[Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+
+The course highlighted the normal if-else-if-else statements.
+
+```js
+if (condition1) {
+  statement1;
+} else if (condition2) {
+  statement2;
+} else if (conditionN) {
+  statementN;
+} else {
+  statementLast;
+}
+```
+
+For loop and for-of loop were touched upon.
+
+```js
+//for loop example
+function countSelected(selectObject) {
+  let numberSelected = 0;
+  for (let i = 0; i < selectObject.options.length; i++) {
+    if (selectObject.options[i].selected) {
+      numberSelected++;
+    }
+  }
+  return numberSelected;
+}
+
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", () => {
+  const musicTypes = document.selectForm.musicTypes;
+  console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
+});
+
+//for-of loop example
+const arr = [3, 5, 7];
+
+for (const i of arr) {
+  console.log(i);
+}
+// Logs: 3 5 7
+```
+
+## Follow [Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) for more information.
+
+
+
+
 
 
