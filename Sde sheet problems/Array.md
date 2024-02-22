@@ -7,8 +7,10 @@
 
 <div>
 
-# SDE sheet problems
+<img src="./Illustrations/sde.gif"/>
+
 [Review Notes](https://algs4.cs.princeton.edu/10fundamentals/)
+
 ## Array
 ### Approaches:
 * **Iteration (Normal and reverse)** :  
