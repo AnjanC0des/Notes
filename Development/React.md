@@ -169,6 +169,7 @@ export default CustomComponent;
 * We can also use destructuring to pass the attributes as props.
 
 For example here we use the data from an object array and pass the properties of the object as props using destructuring in the App.jsx.
+Another thing to note here, destructuring supports default value assignment and we can leverage this in our components as seen in the DataComponent.jsx.
 
 data.jsx:
 
@@ -218,7 +219,7 @@ export default App;
 DataComponent.jsx:
 
 ```jsx
-export default ({title,description}) => {
+export default ({title,description="default description."}) => {
   return (
     <>
       <p>{title + "\n"}</p>
