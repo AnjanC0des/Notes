@@ -71,8 +71,6 @@
 
 </details>
 
----
-
 ### :sparkles: Setup
 
 * **Install node.js**. Also **npm install create-react-app**.
