@@ -388,7 +388,29 @@ const CustomComponent=(props)=>{
 export default CustomComponent;
 ```
 
-It should be noted that you can pass your desired event handlers to the components via props as well.  
+It should be noted that you can pass your desired event handlers to the components via props as well and it is also best practice to do so.
+
+Also, instead of making many event handlers that handler similar tasks, we can make one event handler that can do task for different element based on the argument  passed to it. We can achive this behavior by, passing an anonymous function and calling our handler with appropriate argument on the event property of a tag.
+
+For Example, here we have multiple buttons and we can handle the clicking of all buttons with a single event handler.
+
+App.jsx:
+
+```jsx
+function App() {
+  const clickHandler=(name)=>{
+    console.log(name+" was clicked!")
+  }
+  return (
+    <div className="App">
+      <button onClick={()=>clickHandler("Button1")}>Button 1</button>
+      <button onClick={()=>clickHandler("Button2")}>Button 2</button>
+      <button onClick={()=>clickHandler("Button3")}>Button 3</button>
+    </div>
+  );
+}
+export default App;
+```
 
 ### :star2: State 
 
