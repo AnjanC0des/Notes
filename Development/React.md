@@ -533,40 +533,27 @@ CustomComponent.js:
 
 ```jsx
 import React,{useState} from "react";
-import CustomMessageComponent from "./CustomMessageComponent";
-import Wrapper from './Wrapper';
 import './CustomComponent.css';
 
-const CustomComponent=(props)=>{
+export default (props)=>{
     const [state,setState]=useState({
         text1:'',
         text2:'',
         text3:''
     });
-    const text1Handler=(event)=>{
-        setState((prev)=>{return {...prev,text1:event.target.value}});
-    }
-    const text2Handler=(event)=>{
-        setState((prev)=>{return {...prev,text2:event.target.value}});
-    }
-    const text3Handler=(event)=>{
-        setState((prev)=>{return {...prev,text3:event.target.value}});
+    const textHandler=(event,x)=>{
+        setState((prev)=>{return {...prev,["text"+x]:event.target.value}});
     }
     return (
-        <Wrapper className='new'>
             <div>
-                {props.x}. {props.name}: <CustomMessageComponent message={props.message}/>
                 <label>Dummy label :</label>
-                <input type="text" onChange={text1Handler}/>
-                <input type="text" onChange={text2Handler}/>
-                <input type="text" onChange={text3Handler}/>
-                <button >Click here.</button>
+              {[1,2,3].map((item)=><input type="text" key={item} onChange={(i)=>textHandler(i,item)}/>)}
+              <div>{state.text1}</div>
+              <div>{state.text2}</div>
+              <div>{state.text3}</div>
             </div>
-        </Wrapper>
     );
 }
-
-export default CustomComponent;
 ```
 ### :sparkles: Working with forms and Two way binding
 
