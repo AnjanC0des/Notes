@@ -11,8 +11,13 @@
 <img src="./Illustrations/React.gif"   />
 
 ---
-
+<details>
+<summary>
+ 
 ## Contents
+
+</summary>
+ 
 * [Setup](#sparkles-setup)
 * [Components](#sparkles-components)
 * [Props](#star-props)
@@ -63,7 +68,11 @@
   * [Throwing json](#throw-json)
   * [Using dynamic route params in loaders](#using-dynamic-route-params-in-loaders)
   * [useRouteLoaderData() hook](#useRouteLoaderData-hook)
+
+</details>
+
 ---
+
 ### :sparkles: Setup
 
 * **Install node.js**. Also **npm install create-react-app**.
