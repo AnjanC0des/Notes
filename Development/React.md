@@ -79,15 +79,17 @@
 * Often to share our work, or to reduce disk occupied disk space we delete the node modules folder of the project.
 * We can regain this folder using **npm install** in the project directory, given the package.json is present.
 * We run the project using **npm start** which opens up the project in the browser.
-* React code is written in **JSX**. This is a html in js mix syntax. In React using jsx we can also import assets like image,css files into the jsx file. More [here](https://react.dev/learn/writing-markup-with-jsx).
+* React code is written in **JSX**. This is a html in js mix syntax. In React using jsx we can also import assets like image,css files into the jsx file. 
 * React embraces **declarative** way of writing code, where we just define the starting and final states and React takes care of heavy lifting behind the scenes.
 * React creates a **virtual dom** that finalises the changes before doing them in DOM of browser to make the process fast.
 
 
 ### :sparkles: Components
 
-* React app is divided into **Component**. 
-* Component is a single js function that returns some jsx code.
+[Docs](https://react.dev/learn/describing-the-ui)
+
+* React app is divided into **Components**. 
+* Component is a single js function that returns jsx code. Detailed usage of jsx in react can be found [here](https://react.dev/learn/writing-markup-with-jsx) and [here](https://react.dev/learn/javascript-in-jsx-with-curly-braces).
 * We make our app by chaining and nesting Components together. 
 
 This is an example CustomComponent that is defined in CustomComponent.js and is then imported and used in App.js. Each component js file can also add its **own styling by adding a css file of same name(eg.CustomComponent.css)**. Styles from parents are also applied. Also, css classes are applied using **className inside the component tag**.
@@ -136,6 +138,8 @@ export default CustomComponent;
 ```
 
 ### :star: Props 
+
+[Docs](https://react.dev/learn/passing-props-to-a-component)
 
 * Props are a way to re-use Components, by passing data that we want to it.
 * When **we add a custom component tag to another component**, **we pass values using keys and values inside the tag** itself and this collection of **keys and values is recieved automatically by the component using an argument, which we usually name props**.
@@ -334,6 +338,8 @@ export default CustomComponent;
 
 ### :sparkles: Events in React 
 
+[Docs](https://react.dev/learn/responding-to-events)
+
 * We listen to events in react using event listners that are defined in react itself.
 * For a component the event listner is passed in the tag like a prop and the value assigned is a function that must execute when the event occurs.
 * The function that is assigned to the event listner can be an anonymous function, or a function referenced somewhere else.
@@ -413,6 +419,8 @@ export default App;
 ```
 
 ### :star2: State 
+
+[Docs](https://react.dev/learn/state-a-components-memory)
 
 * We now know how to define components and use them in React. We now need to make the components "reactive" to actions of the user.  
 * We can listen to actions of the user using event listeners, but once react renders a component, it cannot re-evaluate a component unless we tell it changes in which variables must trigger a re-evaluation.  
