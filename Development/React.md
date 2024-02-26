@@ -141,6 +141,8 @@ export default CustomComponent;
 
 [Docs](https://react.dev/learn/passing-props-to-a-component)
 
+#### Using props
+
 * Props are a way to re-use Components, by passing data that we want to it.
 * When **we add a custom component tag to another component**, **we pass values using keys and values inside the tag** itself and this collection of **keys and values is recieved automatically by the component using an argument, which we usually name props**.
 
@@ -240,6 +242,106 @@ export default ({title,description="default description."}) => {
 };
 ```
 
+#### Making reusable wrapper Components in React
+
+* By default, using custom components are meant to used in the self-closing fashion. 
+* If we want to use components are wrappers, like custom HTML tags then we need to tweak the code of these components to produce desired behavior.
+* To show all the components between opening and closing tags of this custom wrapper component we return props.children wrapped in a div.
+* To apply all the css styles through className as you would apply to a div, in the wrapper component, we recieve the className via props and add that to the className of the tag that it returned.
+
+For example, this is a wrapper component with children and applied classes. This is used in CustomComponent.js. If we wouldn't have used destructuring and applied the classes in the div inside the wrapper component, the test and id prop would not have been used inside the Wrapper component and would have been lost.
+
+Wrapper.js:
+
+```jsx
+import React from "react";
+
+const Wrapper = ({children,...props})=>{
+    return <div {...props}>{children}</div> 
+}
+
+export default Wrapper;
+```
+
+CustomComponent.js:
+
+```jsx
+import React from "react";
+import CustomMessageComponent from "./CustomMessageComponent";
+import Wrapper from './Wrapper';
+import './CustomComponent.css';
+const CustomComponent=(props)=>{
+    return (
+        <Wrapper id='new' test="True">
+            <div>
+                {props.x}. {props.name}: <CustomMessageComponent message={props.message}/>
+            </div>
+        </Wrapper>
+    );
+}
+
+export default CustomComponent;
+```
+
+We use destructuring in the tag itself to directly forward all the recieved props to the child such as css classes and other information. This is a common and effective prop forwarding pattern.
+
+Wrapper.js
+
+```jsx
+export default ({richText,placeholder,type,...props})=>{
+  return(
+      <>
+      <input {...props} type={richText?"textarea":"text"} placeHolder={placeholder}></input>
+      </>
+      );
+}
+```
+
+#### Setting Components dynamically
+
+* We can also pass inbuilt html tags and our custom components as props into other components.
+* We can use this to dynamically set and use components as we pass them into components.
+
+For example, here we have a Dummy.jsx that is configured to accecpt two components as props. We demonstrate how to pass both inbuilt html tags and custom component Dummy2.jsx. Using default parameters is also possible, see Dummy.jsx.
+
+App.jsx :
+
+```jsx
+import Dummy from './Dummy';
+import Dummy2 from './Dummy2';
+const App=()=>{
+    return (
+            <div>
+              <Dummy Component1="menu" Component2={Dummy2}></Dummy>
+            </div>
+    );
+}
+export default App;
+```
+
+Dummy.jsx : 
+
+```jsx
+export default ({Component1="ul",Component2})=>{
+  return(
+  <>
+  <Component1>
+  <li>Hi</li>
+  <li>hello</li>
+  </Component1>
+  <Component2/>
+  </>
+  );
+}
+```
+
+Dummy2.jsx
+
+```jsx
+export default ()=>{
+  return(<>This is sparta!</>);
+}
+```
 ### :sparkles: Splitting Components
 
 * While working with components, it is always recommended to keep each component small and managable.
@@ -293,48 +395,6 @@ export default App;
 ```
 
 * Another point to note here is that **data from App.js is passed through CustomComponent.js to CustomMessageComponent.js via props** and that is **one of the ways we transfer data through components in React**.
-
-### :sparkles: Making reusable wrapper Components in React
-
-* By default, using custom components are meant to used in the self-closing fashion. 
-* If we want to use components are wrappers, like custom HTML tags then we need to tweak the code of these components to produce desired behavior.
-* To show all the components between opening and closing tags of this custom wrapper component we return props.children wrapped in a div.
-* To apply all the css styles through className as you would apply to a div, in the wrapper component, we recieve the className via props and add that to the className of the div that it returns.
-
-For example, this is a wrapper component with children and applied classes. This is used in CustomComponent.js.
-
-Wrapper.js:
-
-```jsx
-import React from "react";
-
-const Wrapper = (props)=>{
-    let classes= 'wrapper '+props.className;
-    return <div className={classes}>{props.children}</div> 
-}
-
-export default Wrapper;
-```
-
-CustomComponent.js:
-
-```jsx
-import React from "react";
-import CustomMessageComponent from "./CustomMessageComponent";
-import Wrapper from './Wrapper';
-import './CustomComponent.css';
-const CustomComponent=(props)=>{
-    return (
-        <Wrapper className='new'>
-            <div>
-                {props.x}. {props.name}: <CustomMessageComponent message={props.message}/>
-            </div>
-        </Wrapper>
-    );
-}
-
-export default CustomComponent;
-```
 
 ### :sparkles: Events in React 
 
@@ -960,6 +1020,8 @@ Also a point to note is that we can move the whole conditional part to another c
 
 #### Fragments
 
+[Docs](https://react.dev/reference/react/Fragment)
+
 * Wrapping Components in divs and returning them from other Components makes it cumbersome to work with the final app because we end up with a div soup that is not very optimal.
 * There are various methods to work within the rules of jsx and still avoid using divs.
 * Such methods include using Custom Wrapper Components and **Fragments** with Fragments being the solution provided by React.
@@ -972,31 +1034,33 @@ App.js:
 ```jsx
 import logo from './logo.svg';
 import './App.css';
-import CustomComponent from './CustomComponent';
-import { useState } from 'react';
 import { Fragment } from 'react';
-import People from './People';
 
 function App() {
-  let x=10;
-  let name='Shubhanjan';
-  let message='Example of working of props.';
-  const getData=(textData)=>{
-    textData={key:key,...textData};
-    setTexts((prev)=>{return [textData,...prev]});
-    setKey((prev)=>{
-      return prev+1  
-    });
-  }
-  const [key,setKey]=useState(0);
-  const [texts,setTexts]=useState([]);
-  let textContent=texts.length===0? <p>No texts found</p>: texts.map((x)=>{return <p key={x.key}>{x.text1}    {x.text2}   {x.text3}</p>});
-  
   return (
-    <Fragment >
-      <CustomComponent x={x} name={name} message={message} onSubmission={getData}/>
-      {textContent}
+    <Fragment>
+      {/* some jsx code */}
     </Fragment>
+  );
+}
+
+export default App;
+```
+
+You don't even need to import and use Fragment. Empty opening and closing tags are now being used as Fragments instead of importing ans using them.
+
+App.js:
+
+```jsx
+import logo from './logo.svg';
+import './App.css';
+import { Fragment } from 'react';
+
+function App() {
+  return (
+    <>
+      {/* some jsx code */}
+    </>
   );
 }
 
