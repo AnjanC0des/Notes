@@ -136,6 +136,9 @@ const CustomComponent=()=>{
 
 export default CustomComponent;
 ```
+* While working with components, it is always recommended to keep each component small and managable.
+* When component size begins to increase, it is advisable to consider splitting it.
+* Its best practice to keep the returned jsx from the Components lean and compute any logic in the component before rendering it in the Component.
 
 ### :star: Props 
 
@@ -172,8 +175,8 @@ CustomComponent.js recieves data via props:
 ```jsx
 import React from "react";
 
-const CustomComponent=(props)=>{
-    return <div>{props.x}. {props.name}: {props.message}</div>
+const CustomComponent=({x,name,message})=>{
+    return <div>{x}. {name}: {message}</div>
 }
 
 export default CustomComponent;
@@ -270,11 +273,11 @@ import React from "react";
 import CustomMessageComponent from "./CustomMessageComponent";
 import Wrapper from './Wrapper';
 import './CustomComponent.css';
-const CustomComponent=(props)=>{
+const CustomComponent=({x,name,message})=>{
     return (
         <Wrapper id='new' test="True">
             <div>
-                {props.x}. {props.name}: <CustomMessageComponent message={props.message}/>
+                {x}. {name}: <CustomMessageComponent message={message}/>
             </div>
         </Wrapper>
     );
@@ -297,7 +300,7 @@ export default ({richText,placeholder,type,...props})=>{
 }
 ```
 
-#### Setting Components dynamically
+#### Passing Components as props
 
 * We can also pass inbuilt html tags and our custom components as props into other components.
 * We can use this to dynamically set and use components as we pass them into components.
@@ -342,59 +345,6 @@ export default ()=>{
   return(<>This is sparta!</>);
 }
 ```
-### :sparkles: Splitting Components
-
-* While working with components, it is always recommended to keep each component small and managable.
-* When component size begins to increase, use put that code in another component and use it here.
-
-For example, CustomMessageComponent.js is component that is used in CustomComponent.js.
-
-CustomMessageComponent.js:
-
-```jsx
-import React from "react";
-
-const CustomMessageComponent= (props) =>{
-    return <div>{props.message}</div>;
-}
-
-export default CustomMessageComponent;
-```
-
-CustomComponent.js :
-
-```jsx
-import React from "react";
-import CustomMessageComponent from "./CustomMessageComponent";
-
-const CustomComponent=(props)=>{
-    return <div>{props.x}. {props.name}: <CustomMessageComponent message={props.message}/></div>
-}
-
-export default CustomComponent;
-```
-
-App.js :
-
-```jsx
-import logo from './logo.svg';
-import './App.css';
-import CustomComponent from './CustomComponent';
-function App() {
-  let x=10;
-  let name='Shubhanjan';
-  let message='Example of working of props.';
-  return (
-    <div className="App">
-      <CustomComponent x={x} name={name} message={message}/>
-    </div>
-  );
-}
-
-export default App;
-```
-
-* Another point to note here is that **data from App.js is passed through CustomComponent.js to CustomMessageComponent.js via props** and that is **one of the ways we transfer data through components in React**.
 
 ### :sparkles: Events in React 
 
@@ -478,6 +428,30 @@ function App() {
 export default App;
 ```
 
+When we pass a function as an event handler, that function is passed an event object by react, which can be dereferenced to get access event and element specific attributes.
+
+For example, we can access the text value of an input field using the event object passed to handler to set the state. More in the state section.
+
+CustomComponent.js:
+
+```jsx
+import React,{useState} from "react";
+
+const CustomComponent=(props)=>{
+    const [text,setText]=useState('');
+    const textHandler=(event)=>{
+        setText(event.target.value);
+    }
+    return (
+        <>
+          <input type="text" onChange={textHandler}/>
+        </>
+    );
+}
+
+export default CustomComponent;
+```
+
 ### :star2: State 
 
 [Docs](https://react.dev/learn/state-a-components-memory)
@@ -503,8 +477,8 @@ import CustomMessageComponent from "./CustomMessageComponent";
 import Wrapper from './Wrapper';
 import './CustomComponent.css';
 
-const CustomComponent=(props)=>{
-    const [message,setMessage]=useState(props.message);
+const CustomComponent=({x,name,mssg})=>{
+    const [message,setMessage]=useState(mssg);
     const clickHandler=()=>{
         setMessage(message!=='Message1'?'Message1':'Message2');
         console.log('Message updated.');
@@ -512,7 +486,7 @@ const CustomComponent=(props)=>{
     return (
         <Wrapper className='new'>
             <div>
-                {props.x}. {props.name}: <CustomMessageComponent message={message}/>
+                {x}. {name}: <CustomMessageComponent message={message}/>
                 <button onClick={clickHandler}>Click here.</button>
             </div>
         </Wrapper>
@@ -537,15 +511,15 @@ import CustomMessageComponent from "./CustomMessageComponent";
 import Wrapper from './Wrapper';
 import './CustomComponent.css';
 
-const CustomComponent=(props)=>{
-    const [message,setMessage]=useState(props.message);
+const CustomComponent=({x,name,mssg})=>{
+    const [message,setMessage]=useState(props.mssg);
     const clickHandler=()=>{
         setMessage((prev)=>{return prev!=="Message1"?"Message1":"Message2";});
     }
     return (
         <Wrapper className='new'>
             <div>
-                {props.x}. {props.name}: <CustomMessageComponent message={message}/>
+                {x}. {name}: <CustomMessageComponent message={message}/>
                 <button onClick={clickHandler}>Click here.</button>
             </div>
         </Wrapper>
@@ -570,7 +544,7 @@ import CustomMessageComponent from "./CustomMessageComponent";
 import Wrapper from './Wrapper';
 import './CustomComponent.css';
 
-const CustomComponent=(props)=>{
+const CustomComponent=({x,name,message})=>{
     const [text,setText]=useState('');
     const textHandler=(event)=>{
         setText(event.target.value);
@@ -578,7 +552,7 @@ const CustomComponent=(props)=>{
     return (
         <Wrapper className='new'>
             <div>
-                {props.x}. {props.name}: <CustomMessageComponent message={props.message}/>
+                {x}. {name}: <CustomMessageComponent message={message}/>
                 <label>Dummy label :</label>
                 <input type="text" onChange={textHandler}/>
                 <button >Click here.</button>
@@ -647,14 +621,8 @@ const CustomComponent=(props)=>{
         text2:'',
         text3:''
     });
-    const text1Handler=(event)=>{
-        setState((prev)=>{return {...prev,text1:event.target.value}});
-    }
-    const text2Handler=(event)=>{
-        setState((prev)=>{return {...prev,text2:event.target.value}});
-    }
-    const text3Handler=(event)=>{
-        setState((prev)=>{return {...prev,text3:event.target.value}});
+    const textHandler=(event,text)=>{
+        setState((prev)=>({...prev,[text]:event.target.value}));
     }
     const submitHandler=(event)=>{
         event.preventDefault();
@@ -667,17 +635,14 @@ const CustomComponent=(props)=>{
     }
     return (
         <Wrapper className='new'>
-            <div>
                 {props.x}. {props.name}: <CustomMessageComponent message={props.message}/>
                 <label>Dummy label :</label>
                 <form onSubmit={submitHandler}>
-                    <input type="text" value={state.text1} onChange={text1Handler}/>
-                    <input type="text" value={state.text2} onChange={text2Handler}/>
-                    <input type="text" value={state.text3} onChange={text3Handler}/>
+                    <input type="text" value={state.text1} onChange={(e)=>textHandler(e,"text1")}/>
+                    <input type="text" value={state.text2} onChange={(e)=>textHandler(e,"text2")}/>
+                    <input type="text" value={state.text3} onChange={(e)=>textHandler(e,"text3")}/>
                     <button type="submit" >Click here.</button>
                 </form>
-                
-            </div>
         </Wrapper>
     );
 }
