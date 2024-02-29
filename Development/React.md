@@ -2073,6 +2073,13 @@ const objectHandler=async (object)=>{
 }
 ```
 
+### :star: Connecting to a database
+
+* React is frontend code that runs in the browser of the client and hence we should not attempt to connect to a database using react. Our React app usually talks to a backend that connects to a database and sends us the data via http requests.
+* We should make a backend that provides functionality by exposing endpoints from which sending and recieving data is possible.
+* 
+
+
 ### :star2: making custom Hooks
 
 * We can make custom hooks in react by creating a function whose name starts with 'use', we define this function to be used with other hooks and use it as one.
