@@ -320,7 +320,7 @@ if (condition1) {
 }
 ```
 
-For loop and for-of loop were touched upon.
+For loop, for-in loop and for-of loop were touched upon.
 
 ```js
 //for loop example
@@ -348,6 +348,38 @@ for (const i of arr) {
   console.log(i);
 }
 // Logs: 3 5 7
+
+//for-in loop example
+
+const car = {
+  make: "Toyota",
+  model: "Corolla",
+  year: 2021
+};
+
+for (let key in car) {
+  console.log(`${key}: ${car[key]}`);
+}
+
+//make: Toyota
+//model: Corolla
+//year: 2021
+
+const car = {
+  make: "Toyota",
+  model: "Corolla",
+  year: 2021
+};
+
+for (let [key, value] of Object.entries(car)) {
+  console.log(`${key}: ${value}`);
+}
+
+//make: Toyota
+//model: Corolla
+//year: 2021
+
+
 ```
 
 ## Follow [Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) for more information.
