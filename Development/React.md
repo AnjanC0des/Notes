@@ -11,9 +11,9 @@
 <img src="./Illustrations/React.gif"   />
 
 ---
-<details>
 [React Handbook](https://reacthandbook.dev/)
 [Docs](https://react.dev/) 
+<details>
 <summary>
 ## Contents
 
