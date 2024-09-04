@@ -289,6 +289,20 @@ let mix = [...dune, ...semetary];
 //["Paul", "Chani", "Leto", "Gage", "Jud", "Louis"]
 console.log(mix);
 
+const numbers = [1, 2, 3];
+const [a, , c] = numbers;
+console.log(a, c); // 1 3
+
+const numbers = [1];
+const [a, b = 2] = numbers;
+console.log(a, b); // 1 2
+
+const numbers = [1, 2, 3, 4];
+const [a, b, ...rest] = numbers;
+console.log(a, b); // 1 2
+console.log(rest); // [3, 4]
+
+
 let paul1 = { name: "Paul Atreides", title: "Kwisatz Haderach" };
 let paul2 = { name: "Paul Atreides", title: "Lisan al Gaib" };
 
@@ -300,6 +314,24 @@ console.log(paula);
 //{ name: "Paul Atreides", title: "Lisan al Gaib" }
 console.log(paulb);
 //{ name: "Paul Atreides", title: "Kwisatz Haderach" }
+
+const person = { name: "John", age: 30 };
+const { name: fullName, age: years } = person;
+console.log(fullName, years); // John 30
+
+const person = { name: "John" };
+const { name, age = 25 } = person;
+console.log(name, age); // John 25
+
+const person = { name: "John", address: { city: "New York", zip: 10001 } };
+const { name, address: { city, zip } } = person;
+console.log(name, city, zip); // John New York 10001
+
+const person = { name: "John", age: 30, job: "Developer" };
+const { name, ...rest } = person;
+console.log(name); // John
+console.log(rest); // { age: 30, job: "Developer" }
+
 ```
 
 ## Control Structures
