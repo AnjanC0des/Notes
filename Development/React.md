@@ -12,8 +12,9 @@
 
 ---
 <details>
+[React Handbook](https://reacthandbook.dev/)
+[Docs](https://react.dev/) 
 <summary>
- 
 ## Contents
 
 </summary>
