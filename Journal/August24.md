@@ -48,4 +48,8 @@
             ## 10. Kotlin
             - While not a framework, **Kotlin** has emerged as a popular language for Java developers, especially in Android development. Its interoperability with Java and modern language features make it a strong contender.
 
+            ## 11. Vert.x
+            - another framework/technology for reactive programming
+            
+
 
