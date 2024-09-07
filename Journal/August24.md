@@ -13,7 +13,10 @@
 * indulgence is necessary but lack of progress leads to criplling sense of self sabotage
 * impatient in action, patient with results
 * make enough money to but a pair of noise cancelling headphones
-* implementing git through code sandbox, lets see how this goes
+* ~implementing git through code sandbox, lets see how this goes~
+* implemeting git through sandbox and personal laptop
+* Need to make more contibutions and lock the duck in
+* 
 
 * technology
     * react/vue/angular/astro/etc
@@ -50,6 +53,7 @@
 
             ## 11. Vert.x
             - another framework/technology for reactive programming
+
             
 
 
