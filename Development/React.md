@@ -3,9 +3,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
 
 
-<div style="font-family: 'Poppins', sans-serif;
+<div style='font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-style: normal;">
+  font-style: normal;'>
 
 ---
 <img src="./Illustrations/React.gif"   />
