@@ -1,11 +1,11 @@
-
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
 
 
-<div style="font-family: 'Whisper', cursive;">
+<div style="font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;">
 
 ---
 <img src="./Illustrations/React.gif"   />
@@ -14,61 +14,62 @@
 [React Handbook](https://reacthandbook.dev/)
 [Docs](https://react.dev/) 
 <details>
-<summary>
-## Contents
-
-</summary>
+<summary><h3>Contents</h3></summary>
  
-* [Setup](#sparkles-setup)
-* [Components](#sparkles-components)
-* [Props](#star-props)
-* [Splitting Components](#sparkles-splitting-components)
-* [Making reusable wrapper components in react](#sparkles-making-reusable-wrapper-components-in-react)
-* [Events in react](#sparkles-events-in-react)
-* [State](#star2-state)
-  * [useState hook](#useState-hook)
-  * [prev](#prev)
-  * [Using state with event listeners](#using-state-with-event-listeners)
-  * [Working with multiple states](#working-with-multiple-states)
-* [Working with forms and two way binding](#sparkles-working-with-forms-and-two-way-binding)
-* [Passing data from child to parent and lifting the state](#star-passing-data-from-child-to-parent-and-lifting-the-state)
-* [Lists in React](#sparkles-lists-in-react)
-  * [Stateful Lists](#stateful-lists)
-* [Rendering conditional content in React](#sparkles-rendering-conditional-content-in-react)
-* [Fragments, Portals and Refs](#star-fragments-portals-and-refs)
-  * [Fragments](#fragments)
-  * [Portals](#portals)
-  * [Refs](#refs)
-* [Side Effects and useEffect()](#star2-side-effects-and-useEffect)
-* [useReducer()](#star2-useReducer)
-* [Context](#star2-context)
-* [Using Context Provider to handle state](#using-the-Context-Provider-to-handle-state)
-* [frowardRef](#sparkles-forwardRef)
-* [Optimizing React app](#star2-optimizing-react-app)
-  * [React.memo()](#reactmemo)
-  * [useCallback()](#useCallback)
-  * [useMemo()](#useMemo)
-  * [making request using useEffect and useCallback](#making-requests-using-useEffect-and-useCallback)
-* [Making Custom Hooks](#star2-making-custom-hooks)
-* [Redux](#star2-redux)
-  * [using Redux](#using-redux)
-  * [using redux with redux toolkit](#using-redux-with-redux-toolkit)
-  * [Using multiple slices in redux](#using-multiple-slices-in-redux)
-  * [Thumb rule for pure vs async code](#thumb-rule-for-pure-vs-async-code)
-  * [Handling async state logic with custom action creators](#handling-async-state-logic-with-custom-action-creators)
-* [Routing](#star-routing)
-  * [Adding Routes and Links](#adding-routes-and-links)
-  * [Adding a root route to outlet different subroutes](#adding-a-root-to-outlet-different-subroutes)
-  * [Error page, Navlink and navigating programmatically](#error-page-navlink-and-navigating-programmatically)
-  * [Dynamic Routes](#dynamic-routes)
-  * [Relative vs Absolute Path](#relative-vs-absolute-path)
-  * [Relative attribute in Link tag](#relative-attribute-in-link-tag)
-  * [Index Routes](#index-routes)
-  * [Using Loaders](#using-loaders)
-  * [Customising Error thrown while Routing](#customising-error-thrown-while-routing)
-  * [Throwing json](#throw-json)
-  * [Using dynamic route params in loaders](#using-dynamic-route-params-in-loaders)
-  * [useRouteLoaderData() hook](#useRouteLoaderData-hook)
+- [:sparkles: Setup](#sparkles-setup)
+- [:sparkles: Components](#sparkles-components)
+- [:star: Props](#star-props)
+  - [Using props](#using-props)
+  - [Making reusable wrapper Components in React](#making-reusable-wrapper-components-in-react)
+  - [Passing Components as props](#passing-components-as-props)
+- [:sparkles: Events in React](#sparkles-events-in-react)
+- [:star2: State](#star2-state)
+  - [useState hook](#usestate-hook)
+  - [prev](#prev)
+  - [Using State with event-listeners](#using-state-with-event-listeners)
+  - [Working with multiple states](#working-with-multiple-states)
+- [:sparkles: Working with forms and Two way binding](#sparkles-working-with-forms-and-two-way-binding)
+- [:star: Passing data from child to parent and Lifting the state](#star-passing-data-from-child-to-parent-and-lifting-the-state)
+- [:sparkles: Lists in React](#sparkles-lists-in-react)
+  - [Rendering an array of Components dynamically](#rendering-an-array-of-components-dynamically)
+  - [Stateful Lists](#stateful-lists)
+- [:sparkles: Rendering conditional content in React](#sparkles-rendering-conditional-content-in-react)
+- [:star: Fragments, Portals and refs](#star-fragments-portals-and-refs)
+  - [Fragments](#fragments)
+  - [Portals](#portals)
+  - [refs](#refs)
+- [:star2: Side effects and useEffect()](#star2-side-effects-and-useeffect)
+- [:star2: useReducer()](#star2-usereducer)
+- [:star2: Context](#star2-context)
+  - [Making and using a Context](#making-and-using-a-context)
+  - [Using the Context Provider to handle state](#using-the-context-provider-to-handle-state)
+- [:sparkles: forwardRef](#sparkles-forwardref)
+- [:star2: Optimizing React app](#star2-optimizing-react-app)
+  - [React.memo()](#reactmemo)
+  - [useCallback()](#usecallback)
+  - [useMemo()](#usememo)
+  - [making requests using useEffect and useCallback](#making-requests-using-useeffect-and-usecallback)
+- [:star: Connecting to a database](#star-connecting-to-a-database)
+- [:star2: making custom Hooks](#star2-making-custom-hooks)
+- [:star2: Redux](#star2-redux)
+  - [Using Redux](#using-redux)
+  - [Using Redux with Redux toolkit](#using-redux-with-redux-toolkit)
+  - [using multiple slices in Redux](#using-multiple-slices-in-redux)
+  - [thumb rule for pure vs async code](#thumb-rule-for-pure-vs-async-code)
+  - [handling async state logic with custom action creators](#handling-async-state-logic-with-custom-action-creators)
+- [:star: Routing](#star-routing)
+  - [Adding routes and links](#adding-routes-and-links)
+  - [Adding a root to outlet different subroutes](#adding-a-root-to-outlet-different-subroutes)
+  - [error page, NavLink and navigating programmatically](#error-page-navlink-and-navigating-programmatically)
+  - [Dynamic routes](#dynamic-routes)
+  - [relative vs absolute path](#relative-vs-absolute-path)
+  - [relative attribute in Link tag](#relative-attribute-in-link-tag)
+  - [index routes](#index-routes)
+  - [using loaders](#using-loaders)
+  - [Customising error thrown while routing](#customising-error-thrown-while-routing)
+  - [throw json](#throw-json)
+  - [using dynamic route params in loaders](#using-dynamic-route-params-in-loaders)
+  - [useRouteLoaderData() hook](#userouteloaderdata-hook)
 
 </details>
 
