@@ -33,6 +33,36 @@ const AuthProvider = ({ children }) => {
 
 export default AuthProvider;
 
+Handle Login Success: Update your login component to store user information upon successful login:
+import React, { useContext } from 'react';
+import { GoogleLogin } from '@react-oauth/google';
+import { AuthContext } from './AuthProvider';
+
+const Login = () => {
+  const { login } = useContext(AuthContext);
+
+  const handleLoginSuccess = (response) => {
+    const user = {
+      email: response.profileObj.email,
+      name: response.profileObj.name,
+      token: response.tokenId,
+    };
+    login(user);
+    console.log('Login Success:', user);
+  };
+
+  return (
+    <div>
+      <h2>Login</h2>
+      <GoogleLogin
+        onSuccess={handleLoginSuccess}
+      />
+    </div>
+  );
+};
+
+export default Login;
+
 Create Logout Component: Create a component that will handle the logout process:
 import React, { useContext } from 'react';
 import { AuthContext } from './AuthProvider';
