@@ -1,0 +1,95 @@
+You can create a proxy in Go using the goproxy library to block access to specific websites like YouTube and Instagram during certain times of the day. Here’s a basic example to get you started:
+
+Install the goproxy library:
+go get github.com/elazarl/goproxy
+
+Write the proxy server code:
+Go
+
+package main
+
+import (
+    "log"
+    "net/http"
+    "time"
+
+    "github.com/elazarl/goproxy"
+)
+
+func main() {
+    proxy := goproxy.NewProxyHttpServer()
+    proxy.Verbose = true
+
+    // Block YouTube and Instagram during specific hours
+    proxy.OnRequest(goproxy.DstHostIs("www.youtube.com", "www.instagram.com")).DoFunc(
+        func(r *http.Request, ctx *goproxy.ProxyCtx) (*http.Request, *http.Response) {
+            currentHour := time.Now().Hour()
+            if currentHour >= 9 && currentHour <= 17 { // Block from 9 AM to 5 PM
+                return r, goproxy.NewResponse(r, goproxy.ContentTypeText, http.StatusForbidden, "Access to this site is blocked during working hours.")
+            }
+            return r, nil
+        })
+
+    log.Fatal(http.ListenAndServe(":8080", proxy))
+}
+AI-generated code. Review and use carefully. More info on FAQ.
+Run the proxy server:
+go run main.go
+
+Configure your devices (mobile and laptop) to use this proxy server. You can set the proxy settings in your network configuration to point to the IP address and port where your proxy server is running (e.g., http://<your-ip>:8080).
+In this example:
+
+The proxy server blocks access to YouTube and Instagram from 9 AM to 5 PM.
+You can adjust the blocked hours by changing the if currentHour >= 9 && currentHour <= 17 condition.
+The goproxy.NewResponse function is used to return a “403 Forbidden” response when access is blocked.
+
+
+Steps to Use goproxy in Your Project
+Create a New Directory for Your Project:
+mkdir myproxy
+cd myproxy
+
+Initialize a Go Module:
+go mod init github.com/myusername/myproxy
+
+Add goproxy as a Dependency:
+go get github.com/elazarl/goproxy
+
+Write Your Proxy Server Code: Create a file named main.go and add the following code:
+Go
+
+package main
+
+import (
+    "log"
+    "net/http"
+    "time"
+
+    "github.com/elazarl/goproxy"
+)
+
+func main() {
+    proxy := goproxy.NewProxyHttpServer()
+    proxy.Verbose = true
+
+    // Block YouTube and Instagram during specific hours
+    proxy.OnRequest(goproxy.DstHostIs("www.youtube.com", "www.instagram.com")).DoFunc(
+        func(r *http.Request, ctx *goproxy.ProxyCtx) (*http.Request, *http.Response) {
+            currentHour := time.Now().Hour()
+            if currentHour >= 9 && currentHour <= 17 { // Block from 9 AM to 5 PM
+                return r, goproxy.NewResponse(r, goproxy.ContentTypeText, http.StatusForbidden, "Access to this site is blocked during working hours.")
+            }
+            return r, nil
+        })
+
+    log.Fatal(http.ListenAndServe(":8080", proxy))
+}
+AI-generated code. Review and use carefully. More info on FAQ.
+Run Your Proxy Server:
+go run main.go
+
+Explanation
+Initialize a Go Module: This creates a go.mod file to manage your project’s dependencies.
+Add goproxy as a Dependency: This downloads the goproxy library and adds it to your project.
+Write Your Proxy Server Code: The example code sets up a proxy server that blocks access to YouTube and Instagram during working hours (9 AM to 5 PM).
+This setup should help you get your proxy server running. If you encounter any more issues or need further assistance, feel free to ask!
