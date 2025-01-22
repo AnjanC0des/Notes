@@ -1,3 +1,137 @@
+Common Annotations in Helidon MP
+@ApplicationScoped:
+Used to define a bean whose lifecycle is tied to the application.
+Java
+
+@ApplicationScoped
+public class MyService {
+    // Service logic
+}
+AI-generated code. Review and use carefully. More info on FAQ.
+@Inject:
+Used for dependency injection.
+Java
+
+@Inject
+private MyService myService;
+AI-generated code. Review and use carefully. More info on FAQ.
+@Path:
+Defines the base URI for a resource class.
+Java
+
+@Path("/greet")
+public class GreetResource {
+    // Resource methods
+}
+AI-generated code. Review and use carefully. More info on FAQ.
+@GET, @POST, @PUT, @DELETE:
+HTTP method annotations used to define resource methods.
+Java
+
+@GET
+@Produces(MediaType.APPLICATION_JSON)
+public Response getGreeting() {
+    return Response.ok("Hello, World!").build();
+}
+AI-generated code. Review and use carefully. More info on FAQ.
+@Produces and @Consumes:
+Specifies the media types that a resource method can produce or consume.
+Java
+
+@POST
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
+public Response createGreeting(Greeting greeting) {
+    // Method logic
+}
+AI-generated code. Review and use carefully. More info on FAQ.
+@ConfigProperty:
+Injects configuration properties.
+Java
+
+@Inject
+@ConfigProperty(name = "app.greeting")
+private String greeting;
+AI-generated code. Review and use carefully. More info on FAQ.
+Learning Resources
+Helidon Documentation:
+The official Helidon documentation provides comprehensive guides and examples on using annotations in Helidon MP1.
+Helidon Tutorials:
+GitHub repositories like nagypeter/helidon-tutorial offer practical examples and step-by-step tutorials2.
+Getting Started Guides:
+The Getting Started with Helidon MicroProfile guide is a great resource to understand the basics and see annotations in action3.
+These resources should help you get started with using annotations in Helidon MicroProfile. If you have any specific questions or need further assistance, feel free to ask!
+
+Learn more
+
+1
+
+helidon.io
+2
+
+github.com
+3
+
+helidon.io
+
+
+
+You
+Sent by you:
+i need help creating a authentication service using helidon mp and i dont know anything about microprofile or how to implement such a service entirely, i know i have to check the credentials i recieve with a source of truth such as a database or a local object while developing, and i have to use a jwt library to generate and provide the token to the requestor if the credentials are correct and i need an object to keep track on the valid tokens, i also need to communicate with a message service to verify a certain token, is my approach a sound one? how do i make this? can you give me step by step pointers on how to do it without giving any code?
+Copilot
+Sent by Copilot:
+Your approach to creating an authentication service using Helidon MicroProfile (MP) is sound. Here are step-by-step pointers to help you implement this service:
+
+Step 1: Set Up Your Helidon MP Project
+Generate a Helidon MP Project:
+Use the Helidon archetype to create a new project.
+mvn archetype:generate -DinteractiveMode=false \
+    -DarchetypeGroupId=io.helidon.archetypes \
+    -DarchetypeArtifactId=helidon-quickstart-mp \
+    -DarchetypeVersion=1.4.12 \
+    -DgroupId=io.helidon.examples \
+    -DartifactId=helidon-quickstart-mp \
+    -Dpackage=io.helidon.examples.quickstart.mp
+
+Step 2: Define Your Authentication Endpoint
+Create a REST Endpoint:
+Define a resource class with a @Path annotation to handle authentication requests.
+Use @POST to handle login requests.
+Step 3: Validate Credentials
+Check Credentials:
+Implement a method to validate the received credentials against your source of truth (e.g., database or local object).
+Use dependency injection (@Inject) to access your data source.
+Step 4: Generate JWT Tokens
+Generate JWT Tokens:
+Use a JWT library to create tokens. Helidon MP supports JWT through the helidon-microprofile-jwt-auth module.
+Configure JWT settings in your application.yaml or microprofile-config.properties.
+Step 5: Return the Token
+Return the JWT Token:
+If credentials are valid, generate a JWT token and return it in the response.
+Use @Produces to specify the response media type (e.g., application/json).
+Step 6: Secure Endpoints
+Secure Other Endpoints:
+Use @RolesAllowed to secure your endpoints.
+Configure JWT authentication in your Helidon MP application.
+Step 7: Token Management
+Manage Valid Tokens:
+Implement a mechanism to keep track of valid tokens (e.g., in-memory store or database).
+Ensure tokens are invalidated when necessary.
+Step 8: Communicate with Message Service
+Verify Tokens with Message Service:
+Implement communication with your message service to verify tokens.
+Use a REST client or messaging library to interact with the service.
+Step 9: Testing and Debugging
+Test Your Service:
+Write unit and integration tests to ensure your authentication service works as expected.
+Use tools like Postman or curl to manually test your endpoints.
+Step 10: Documentation and Deployment
+Document and Deploy:
+Document your API endpoints and configuration.
+Deploy your service to a suitable environment (e.g., Docker, Kubernetes).
+These steps should guide you through creating an authentication service using Helidon MP.
+
 Certainly! Here’s a step-by-step flow of using JWT for authentication from both the backend and frontend perspectives:
 
 Frontend Perspective
